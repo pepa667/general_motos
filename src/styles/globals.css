@@ -2,18 +2,66 @@
 @import 'tw-animate-css';
 
 @theme inline {
-  --color-primary: #262626; /* neutral-800 */
-  --color-secondary: #171717; /* neutral-900 */
-  --color-tertiary: #404040; /* neutral-700 */
-  --color-color: #f3f3f3;
-  --color-accent-primary: #2563eb; /* blue-600 */
-  --color-accent-primary-state: #1d4ed8; /* blue-700 */
+  --color-primary: #262626; /* neutral-800 - Fundo/Textos */
+  --color-secondary: #171717; /* neutral-900 - Backgrounds alternativos */
+  --color-tertiary: #404040; /* neutral-700 - Bordas/Divisores */
+  --color-color: #f3f3f3; /* neutral-100 - Texto principal */
+
+  /* 🔥 ATUALIZAÇÃO DO ACCENT COLOR: Vermelho Performance UFC */
+  --color-accent-primary: #dc2626; /* Tailwind red-600 - Vibrante e Premium */
+  --color-accent-primary-state: #b91c1c; /* Tailwind red-700 - Hover state */
 }
 
+/* Resto do seu CSS (html, body, keyframes, etc.) permanece igual... */
 html,
 body {
   width: 100%;
   height: 100%;
+}
+/* ... resto do arquivo image_9.png ... */
+
+.bg-hero-radial {
+  background-image: radial-gradient(ellipse at top, #ea003d2e, #09090b);
+}
+
+/* Grade industrial com máscara de fade nas bordas */
+.hero-grid-mask {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, #27272a 1px, transparent 1px),
+    linear-gradient(to bottom, #27272a 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, #000 60%, transparent 100%);
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, #000 60%, transparent 100%);
+  opacity: 0.2;
+}
+
+@property --border-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.rotating-border-conic {
+  background-image: conic-gradient(
+    from var(--border-angle),
+    #000 0%,
+    #000 78%,
+    #dc2626 78%,
+    #dc2626 88%,
+    #000 88%
+  );
+}
+
+@theme {
+  --animate-rotate-border: border-rotate 3s linear infinite;
+
+  @keyframes border-rotate {
+    to {
+      --border-angle: 360deg;
+    }
+  }
 }
 
 .github-corner:hover .octo-arm {

@@ -1,26 +1,55 @@
+// IMPORTANTE: Ajustado para o nome real do seu arquivo de estilos
 import '../styles/globals.css';
-import '../styles/globals.scss';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const main = document.querySelector('#main');
-  const counter = main.querySelector('#counter');
+const WHATSAPP_PHONE = '5515981661573';
 
-  main.addEventListener('click', (event) => {
-    const { id, type } = event.target;
+const MESSAGES = {
+  header: 'Olá! Conheci o site da UFC e gostaria de agendar um horário de atendimento.',
+  'hero-primary':
+    'Olá! Acessei o site da UFC e gostaria de falar com um especialista sobre um projeto para o meu carro.',
+  'servico-som':
+    'Olá! Gostaria de fazer um orçamento para um projeto de Som Automotivo personalizado.',
+  'servico-mecanica': 'Olá! Gostaria de agendar uma revisão de Mecânica Premium com hora marcada.',
+  default: 'Olá! Gostaria de mais informações sobre os serviços da UFC SOUND & MECHANICS.'
+};
 
-    if (type === 'button') {
-      const currentCount = Number(counter.textContent);
+function initWhatsAppLinks() {
+  const buttons = document.querySelectorAll('.whatsapp-btn');
 
-      switch (id) {
-        case 'increment': {
-          counter.textContent = currentCount + 1;
-          break;
-        }
-        case 'decrement': {
-          counter.textContent = currentCount - 1;
-          break;
-        }
-      }
+  for (const button of buttons) {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const ctaType = button.dataset.cta || 'default';
+      const text = encodeURIComponent(MESSAGES[ctaType] || MESSAGES['default']);
+      const url = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${text}`;
+
+      window.open(url, '_blank');
+    });
+  }
+}
+
+function initFloatingButtonScroll() {
+  const floatingBtn = document.querySelector('#floating-whatsapp');
+  if (!floatingBtn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      floatingBtn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+      floatingBtn.classList.add('opacity-100', 'translate-y-0');
+    } else {
+      floatingBtn.classList.remove('opacity-100', 'translate-y-0');
+      floatingBtn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
     }
   });
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    initWhatsAppLinks();
+    initFloatingButtonScroll();
+  });
+} else {
+  initWhatsAppLinks();
+  initFloatingButtonScroll();
+}
