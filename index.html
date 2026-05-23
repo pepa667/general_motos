@@ -28,19 +28,19 @@
         <a href="#servicos" class="hover:text-accent-primary transition-colors">Serviços</a>
         <a href="#galeria" class="hover:text-accent-primary transition-colors">Galeria</a>
       </nav>
-      <div class="rotating-border rotating-border--hover rounded transition-all duration-300">
+      <div id="agenda-btn-wrapper" class="rotating-border rotating-border--hover rounded transition-all duration-300">
         <a href="#" data-cta="header"
-          class="whatsapp-btn bg-accent-primary block rounded px-5 py-2.5 text-sm font-bold tracking-wider text-white uppercase transition-colors duration-500 hover:bg-zinc-900 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)]">
+          class="whatsapp-btn bg-accent-primary block rounded px-5 py-2.5 text-sm font-bold tracking-wider text-white uppercase transition-colors duration-500 hover:bg-zinc-900 [&.active]:bg-zinc-900 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)] [&.active]:shadow-[0_0_20px_rgba(220,38,38,0.3)]">
           Agendar Hora
         </a>
       </div>
     </div>
   </header>
 
-  <section class="bg-hero-radial relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
+  <section class="bg-hero-radial relative flex min-h-screen items-center justify-between overflow-hidden pt-20 h-full">
     <div class="hero-grid-mask"></div>
 
-    <div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
+    <div class="relative z-10 mx-auto max-w-4xl px-4 text-center min-h-max h-auto flex flex-col items-center justify-center ">
       <span id="ufc-hero-logo" class="relative mb-6 inline-block h-auto px-3 py-1">
         <img src="src/assets/images/ufc_sound.png" id="ufc-hero-logo" class="max-h-[30svh]" alt="UFC Sound" />
       </span>
@@ -52,18 +52,18 @@
         Ampliamos nossa garagem para entregar o cuidado completo que seu carro merece: do projeto
         de áudio sob medida à mecânica de alta precisão.
       </p>
-      <div class="flex flex-col items-center justify-center gap-4 perspective-normal sm:flex-row">
+      <div class="flex flex-col items-center justify-between gap-8 gap-y-16 perspective-normal sm:flex-row h-auto">
         <div
-          class="rotating-border rotating-border--hover max-w-sm rounded-lg hover:**:*:bg-amber-400 transition-all duration-500 ease-out transform-3d">
+          class="rotating-border rotating-border--hover max-w-sm rounded-lg transition-all duration-500 ease-out transform-3d">
           <a href="#" data-cta="hero-primary"
-            class="whatsapp-btn bg-accent-primary  hover:bg-amber-500 block w-full rounded px-8 py-4 text-center font-extrabold tracking-wider text-white uppercase transition-all duration-500 hover:bg-zinc-900 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)] sm:w-auto">
+            class="whatsapp-btn block w-full rounded border border-zinc-800 bg-accent-primary-state px-8 py-4 text-center font-bold tracking-wider text-zinc-300 uppercase transition-all duration-500 hover:bg-zinc-800 [&.active]:bg-zinc-800 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)] sm:w-auto">
             Falar com Especialista
           </a>
         </div>
         <div
           class="rotating-border rotating-border--hover max-w-sm rounded-lg transition-all duration-500 ease-out transform-3d">
           <a href="#servicos" data-cta="hero-secondary"
-            class="block w-full rounded border border-zinc-800 bg-zinc-900 px-8 py-4 text-center font-bold tracking-wider text-zinc-300 uppercase transition-all duration-500 hover:bg-zinc-800 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)] sm:w-auto">
+            class="block w-full rounded border border-zinc-800 bg-zinc-900 px-8 py-4 text-center font-bold tracking-wider text-zinc-300 uppercase transition-all duration-500 hover:bg-zinc-800 [&.active]:bg-zinc-800 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)] sm:w-auto">
             Conhecer Serviços
           </a>
         </div>
@@ -125,7 +125,7 @@
       </div>
 
       <div class="grid gap-8 md:grid-cols-2">
-        <div class="rotating-border rotating-border--hover max-w-full rounded-2xl">
+        <div class="rotating-border--hover max-w-full rounded-2xl p-px bg-zinc-950 hover:bg-accent-primary [&.is-center]:animate-mecanica-glow hover:animate-mecanica-glow transition-[background-color] duration-700 ease-out">  
           <div
             class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700"
             style="background-image: url('src/assets/images/sound.jpg')">
@@ -158,14 +158,14 @@
             <div
               class="rotating-border rotating-border--hover max-w-full rounded-lg transition-all duration-500 ease-out transform-3d">
               <a href="#" data-cta="servico-som"
-                class="whatsapp-btn block w-full rounded bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:text-accent-primary hover:bg-zinc-800">
+                class="whatsapp-btn block w-full rounded bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:text-accent-primary [&.active]:text-accent-primary">
                 Orçamento de Som
               </a>
             </div>
           </div>
         </div>
 
-        <div class="rotating-border rotating-border--hover max-w-full rounded-2xl cursor-arrow">  
+        <div class="rotating-border--hover max-w-full rounded-2xl p-px bg-zinc-950 hover:bg-accent-primary [&.is-center]:animate-mecanica-glow hover:animate-mecanica-glow transition-[background-color] duration-700 ease-out">  
           <div
             class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700"
             style="background-image: url('src/assets/images/motor.jpg')">
@@ -197,7 +197,7 @@
             <div
               class="rotating-border rotating-border--hover max-w-full rounded-lg transition-all duration-500 ease-out transform-3d">
               <a href="#" data-cta="servico-mecanica"
-                class="whatsapp-btn block w-full max-w-full rounded bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:text-accent-primary hover:bg-zinc-800">
+                class="whatsapp-btn block w-full max-w-full rounded bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:text-accent-primary [&.active]:text-accent-primary">
                 Agendar Mecânica
               </a>
             </div>

@@ -7,8 +7,7 @@ const MESSAGES = {
   header: 'Olá! Conheci o site da UFC e gostaria de agendar um horário de atendimento.',
   'hero-primary':
     'Olá! Acessei o site da UFC e gostaria de falar com um especialista sobre um projeto para o meu carro.',
-  'hero-secondary':
-    'Olá! Gostaria de conhecer melhor os serviços da UFC SOUND & MECHANICS.',
+  'hero-secondary': 'Olá! Gostaria de conhecer melhor os serviços da UFC SOUND & MECHANICS.',
   'servico-som':
     'Olá! Gostaria de fazer um orçamento para um projeto de Som Automotivo personalizado.',
   'servico-mecanica': 'Olá! Gostaria de agendar uma revisão de Mecânica Premium com hora marcada.',
@@ -80,7 +79,23 @@ function initFloatingButtonScroll() {
 
 function initScrollActivation() {
   // Only on touch devices (pointer: coarse = finger, not mouse)
-  if (!window.matchMedia('(pointer: coarse)').matches) return;
+  if (!globalThis.matchMedia('(pointer: coarse)').matches) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > document.body.scrollHeight - window.innerHeight - 300) {
+      document.querySelector('#agenda-btn-wrapper').classList.toggle('is-center', true);
+      document
+        .querySelector('#agenda-btn-wrapper')
+        .querySelector('a')
+        .classList.toggle('active', true);
+    } else {
+      document.querySelector('#agenda-btn-wrapper').classList.toggle('is-center', false);
+      document
+        .querySelector('#agenda-btn-wrapper')
+        .querySelector('a')
+        .classList.toggle('active', false);
+    }
+  });
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -89,7 +104,7 @@ function initScrollActivation() {
         const child = wrapper.querySelector(':scope > a, :scope > button');
         wrapper.classList.toggle('is-center', entry.isIntersecting);
         if (child) {
-          child.style.filter = entry.isIntersecting ? 'brightness(0.72)' : '';
+          child.classList.toggle('active', entry.isIntersecting);
         }
       }
     },
