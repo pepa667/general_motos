@@ -118,23 +118,6 @@ body {
   padding: 1px;
 }
 
-#ufc-hero-logo:before {
-    background: #fff;
-    content: "";
-    height: 11%;
-    left: 22%;
-    position: absolute;
-    top: 27%;
-    width: 16%;
-    z-index: -1;
-    animation: colorChange 4s infinite
-}
-
-@keyframes colorChange {
-  0% { background-color: #dc2626; }
-  50% { background-color: white; }
-  100% { background-color: #dc2626; }
-}
 
 @theme {
   --animate-rotate-border: border-rotate 3s linear infinite;
