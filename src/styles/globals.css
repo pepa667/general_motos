@@ -76,9 +76,18 @@ body {
 .rotating-border--hover {
   margin: 1px;
 }
-.rotating-border--hover:hover {
+.rotating-border--hover:hover,
+.rotating-border--hover.is-center {
   padding: 1px;
   margin: 0;
+}
+
+/* Smooth filter transition for scroll-activation on touch devices */
+.rotating-border--hover > a,
+.rotating-border--hover > button {
+  transition-property: background-color, box-shadow, filter;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
 }
 
 /* Border is permanently visible as a 1 px inset */

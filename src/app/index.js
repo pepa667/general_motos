@@ -78,12 +78,37 @@ function initFloatingButtonScroll() {
   });
 }
 
+function initScrollActivation() {
+  // Only on touch devices (pointer: coarse = finger, not mouse)
+  if (!window.matchMedia('(pointer: coarse)').matches) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        const wrapper = entry.target;
+        const child = wrapper.querySelector(':scope > a, :scope > button');
+        wrapper.classList.toggle('is-center', entry.isIntersecting);
+        if (child) {
+          child.style.filter = entry.isIntersecting ? 'brightness(0.72)' : '';
+        }
+      }
+    },
+    { rootMargin: '-40% 0px -40% 0px' }
+  );
+
+  for (const wrapper of document.querySelectorAll('.rotating-border--hover')) {
+    observer.observe(wrapper);
+  }
+}
+
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     initWhatsAppModal();
     initFloatingButtonScroll();
+    initScrollActivation();
   });
 } else {
   initWhatsAppModal();
   initFloatingButtonScroll();
+  initScrollActivation();
 }
