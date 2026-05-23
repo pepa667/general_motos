@@ -8,8 +8,18 @@
   --color-color: #f3f3f3; /* neutral-100 - Texto principal */
 
   /* 🔥 ATUALIZAÇÃO DO ACCENT COLOR: Vermelho Performance UFC */
-  --color-accent-primary: #dc2626; /* Tailwind red-600 - Vibrante e Premium */
-  --color-accent-primary-state: #b91c1c; /* Tailwind red-700 - Hover state */
+  --color-accent-primary: #e3a830; /* Tailwind red-600 - Vibrante e Premium */
+  --color-accent-primary-state: #bc7912; /* Tailwind red-700 - Hover state */
+
+  --background-image-dourado: linear-gradient(
+    135deg,
+    #7a4a06 0%,
+    #e3a830 25%,
+    #fff5d6 45%,
+    #f0b323 55%,
+    #bc7912 80%,
+    #fce492 100%
+  );
 }
 
 /* Resto do seu CSS (html, body, keyframes, etc.) permanece igual... */
@@ -37,6 +47,19 @@ body {
   opacity: 0.3;
 }
 
+.dourado {
+  background: linear-gradient(
+    135deg,
+    #7a4a06 0%,    /* Sombra escura inicial */
+    #e3a830 25%,   /* Ouro médio */
+    #fff5d6 45%,   /* Brilho intenso (Highlight) */
+    #f0b323 55%,   /* Ouro puro */
+    #bc7912 80%,   /* Bronze profundo */
+    #fce492 100%   /* Reflexo final */
+  );
+}
+
+
 @property --border-angle {
   syntax: '<angle>';
   inherits: false;
@@ -56,16 +79,16 @@ body {
     from var(--border-angle),
     #000 0%,
     #000 22%,
-    #dc2626 22%,
-    #dc2626 43%,
+    #e3a830 22%,
+    #e3a830 43%,
     #000 43%,
     #000 57%,
-    #dc2626 57%,
-    #dc2626 61%,
+    #e3a830 57%,
+    #e3a830 61%,
     #000 61%,
     #000 78%,
-    #dc2626 78%,
-    #dc2626 88%,
+    #e3a830 78%,
+    #e3a830 88%,
     #000 88%
   );
   animation: var(--animate-rotate-border);
