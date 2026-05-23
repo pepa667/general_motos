@@ -69,15 +69,14 @@ body {
     #000 88%
   );
   animation: var(--animate-rotate-border);
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 /* Border reveals on hover; a 1 px margin keeps layout stable when idle */
 .rotating-border--hover {
   margin: 1px;
 }
-.rotating-border--hover:hover,
-.rotating-border--hover.is-touch-hovered {
+.rotating-border--hover:hover {
   padding: 1px;
   margin: 0;
 }
@@ -85,29 +84,6 @@ body {
 /* Border is permanently visible as a 1 px inset */
 .rotating-border--visible {
   padding: 1px;
-}
-
-/* ─── Touch-hover state for inner <a> elements ───────────────────────────────
-   Mirrors the :hover styles of each button variant on touch devices.
-   Applied via JS (initTouchHover) on the first tap.
-   ──────────────────────────────────────────────────────────────────────────── */
-.whatsapp-btn.is-touch-hovered {
-  box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
-}
-
-.whatsapp-btn[data-cta='header'].is-touch-hovered,
-.whatsapp-btn[data-cta='hero-primary'].is-touch-hovered {
-  background-color: #18181b; /* zinc-900 */
-}
-
-.whatsapp-btn[data-cta='hero-secondary'].is-touch-hovered {
-  background-color: #27272a; /* zinc-800 */
-}
-
-.whatsapp-btn[data-cta='servico-som'].is-touch-hovered,
-.whatsapp-btn[data-cta='servico-mecanica'].is-touch-hovered {
-  background-color: #27272a; /* zinc-800 */
-  color: #dc2626; /* accent-primary */
 }
 
 #ufc-hero-logo:before {

@@ -98,16 +98,19 @@
       </div>
     </div>
   </section>
-  <section class="border-t border-zinc-900 bg-zinc-950 relative flex min-h-[70svh] items-end justify-center" id="hightlight">
+  <section class="border-t border-zinc-900 bg-zinc-950 relative flex min-h-[70svh] items-end justify-center"
+    id="hightlight">
     <div class="absolute inset-0 overflow-hidden">
-      <video autoplay muted loop playsinline id="background-video" class="absolute inset-0 h-full w-full object-cover opacity-30">
+      <video autoplay muted loop playsinline id="background-video"
+        class="absolute inset-0 h-full w-full object-cover opacity-30">
         <source src="/src/assets/videos/video_bg.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-zinc-950/20"></div>
     </div>
     <div class="relative z-10 mx-auto max-w-7xl px-4 py-24 text-center">
-      <h3 class="text-2xl font-black tracking-tight uppercase md:text-2xl from-accent-primary bg-linear-to-r to-rose-500 bg-clip-text text-transparent">
+      <h3
+        class="text-2xl font-black tracking-tight uppercase md:text-2xl from-accent-primary bg-linear-to-r to-rose-500 bg-clip-text text-transparent">
         Infraestrutura de ponta para projetos de som e mecânica.
       </h3>
     </div>
@@ -131,7 +134,8 @@
                 class="bg-accent-primary/10 text-accent-primary mb-6 flex h-12 w-12 items-center justify-center rounded-lg text-xl font-black">
                 🔊
               </div>
-              <h3 class="mb-4 text-xl font-bold tracking-tight uppercase md:text-2xl">
+              <h3
+                class="mb-2 py-1 bg-accent-primary text-zinc-200 inline-block pl-12 pr-3 transform -translate-x-12 text-xl font-bold tracking-tight uppercase md:text-2xl from-accent-primary bg-linear-to-r to-rose-500">
                 Som & Personalização
               </h3>
               <p class="mb-6 text-sm leading-relaxed text-zinc-400 md:text-base">
@@ -154,14 +158,14 @@
             <div
               class="rotating-border rotating-border--hover max-w-full rounded-lg transition-all duration-500 ease-out transform-3d">
               <a href="#" data-cta="servico-som"
-                class="whatsapp-btn hover:text-accent-primary block w-full rounded bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:bg-zinc-800">
+                class="whatsapp-btn block w-full rounded bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:text-accent-primary hover:bg-zinc-800">
                 Orçamento de Som
               </a>
             </div>
           </div>
         </div>
 
-        <div class="rotating-border rotating-border--hover max-w-full rounded-2xl">
+        <div class="rotating-border rotating-border--hover max-w-full rounded-2xl cursor-arrow">  
           <div
             class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700"
             style="background-image: url('src/assets/images/motor.jpg')">
@@ -170,7 +174,8 @@
                 class="bg-accent-primary/10 text-accent-primary mb-6 flex h-12 w-12 items-center justify-center rounded-lg text-xl font-black">
                 🛠
               </div>
-              <h3 class="mb-4 text-xl font-bold tracking-tight uppercase md:text-2xl">
+              <h3
+                class="mb-2 py-1 bg-accent-primary text-zinc-200 inline-block pl-12 pr-3 transform -translate-x-12 text-xl font-bold tracking-tight uppercase md:text-2xl from-accent-primary bg-linear-to-r to-rose-500">
                 Mecânica & Performance
               </h3>
               <p class="mb-6 text-sm leading-relaxed text-zinc-400 md:text-base">
@@ -192,7 +197,7 @@
             <div
               class="rotating-border rotating-border--hover max-w-full rounded-lg transition-all duration-500 ease-out transform-3d">
               <a href="#" data-cta="servico-mecanica"
-                class="whatsapp-btn hover:text-accent-primary block w-full max-w-full rounded bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:bg-zinc-800">
+                class="whatsapp-btn block w-full max-w-full rounded bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:text-accent-primary hover:bg-zinc-800">
                 Agendar Mecânica
               </a>
             </div>
@@ -264,6 +269,52 @@
         d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.296 1.489 4.93 1.49 5.361 0 9.749-4.305 9.752-9.605.001-2.568-1.002-4.979-2.825-6.793C16.68 2.431 14.269 1.43 11.72 1.43 6.361 1.43 1.974 5.735 1.971 11.036c-.001 1.742.476 3.442 1.391 4.912l-.982 3.593 3.667-.957z" />
     </svg>
   </a>
+
+  <!-- WhatsApp confirmation modal -->
+  <div id="whatsapp-modal"
+    class="fixed inset-0 z-[200] flex items-end justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 sm:items-center"
+    role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="modal-backdrop" class="absolute inset-0 bg-zinc-950/80 backdrop-blur-sm"></div>
+
+    <div id="modal-dialog"
+      class="relative z-10 w-full max-w-md translate-y-4 rounded-2xl border border-zinc-800 bg-zinc-900 p-6 shadow-2xl transition-transform duration-300 sm:translate-y-0">
+      <div class="mb-5 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <svg class="h-5 w-5 shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.296 1.489 4.93 1.49 5.361 0 9.749-4.305 9.752-9.605.001-2.568-1.002-4.979-2.825-6.793C16.68 2.431 14.269 1.43 11.72 1.43 6.361 1.43 1.974 5.735 1.971 11.036c-.001 1.742.476 3.442 1.391 4.912l-.982 3.593 3.667-.957z" />
+          </svg>
+          <h2 id="modal-title" class="text-sm font-bold tracking-widest text-zinc-300 uppercase">Enviar mensagem</h2>
+        </div>
+        <button id="modal-close" aria-label="Fechar"
+          class="rounded p-1 text-zinc-500 transition-colors hover:text-zinc-200">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <p class="mb-1 text-xs font-semibold tracking-widest text-zinc-500 uppercase">Prévia da mensagem</p>
+      <div class="mb-6 rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-3">
+        <p id="modal-message" class="text-sm leading-relaxed text-zinc-300"></p>
+      </div>
+
+      <div class="flex gap-3">
+        <button id="modal-cancel"
+          class="flex-1 rounded-lg border border-zinc-700 px-4 py-3 text-sm font-bold tracking-wider text-zinc-400 uppercase transition-colors hover:bg-zinc-800 hover:text-zinc-200">
+          Cancelar
+        </button>
+        <a id="modal-confirm" href="#" target="_blank" rel="noopener noreferrer"
+          class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-3 text-sm font-bold tracking-wider text-white uppercase transition-colors hover:bg-emerald-500">
+          <svg class="h-5 w-5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.296 1.489 4.93 1.49 5.361 0 9.749-4.305 9.752-9.605.001-2.568-1.002-4.979-2.825-6.793C16.68 2.431 14.269 1.43 11.72 1.43 6.361 1.43 1.974 5.735 1.971 11.036c-.001 1.742.476 3.442 1.391 4.912l-.982 3.593 3.667-.957z" />
+          </svg>
+          Enviar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="/src/app/index.js"></script>
 </body>
