@@ -10,5 +10,14 @@ export default {
     host: HOST,
     port: PORT
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        // Adicione cada nova página aqui:
+        // orcamento: 'orcamento.html',
+      }
+    }
+  },
   plugins: [legacy()]
 };

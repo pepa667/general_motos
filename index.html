@@ -16,24 +16,30 @@
       class="fixed top-0 left-0 z-50 w-full border-b border-zinc-900 bg-zinc-950/80 backdrop-blur-md"
     >
       <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4">
-        <div class="text-2xl font-black tracking-tighter">
-          UFC
-          <span class="text-accent-primary -mt-2 block text-sm font-semibold tracking-widest"
-            >SOUND & MECHANICS</span
-          >
-        </div>
+        <a href="#" class="max-h-full h-auto contents">
+          <object data="src/assets/images/ufc_sound.png" type="image/png" class="h-auto max-h-[150%] translate-y-1/3">
+            <div class="text-2xl font-black tracking-tighter">
+              UFC
+              <span class="text-accent-primary -mt-2 block text-sm font-semibold tracking-widest"
+                >SOUND & MECHANICS</span
+              >
+            </div>
+          </object>
+        </a>
         <nav class="hidden space-x-8 text-sm font-medium tracking-wide text-zinc-400 md:flex">
           <a href="#sobre" class="hover:text-accent-primary transition-colors">A Oficina</a>
           <a href="#servicos" class="hover:text-accent-primary transition-colors">Serviços</a>
           <a href="#galeria" class="hover:text-accent-primary transition-colors">Galeria</a>
         </nav>
-        <a
-          href="#"
-          data-cta="header"
-          class="whatsapp-btn bg-accent-primary hover:bg-accent-primary-state transform rounded px-5 py-2.5 text-sm font-bold tracking-wider text-white uppercase transition-all hover:-translate-y-0.5"
-        >
-          Agendar Hora
-        </a>
+        <div class="rotating-border rotating-border--hover rounded transition-all duration-300">
+          <a
+            href="#"
+            data-cta="header"
+            class="whatsapp-btn bg-accent-primary block rounded px-5 py-2.5 text-sm font-bold tracking-wider text-white uppercase transition-colors duration-500 hover:bg-zinc-900 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)]"
+          >
+            Agendar Hora
+          </a>
+        </div>
       </div>
     </header>
 
@@ -43,13 +49,17 @@
       <div class="hero-grid-mask"></div>
 
       <div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
-        <span class="mb-6 inline-block h-auto px-3 py-1">
-          <img src="src/assets/images/ufc_sound.png" class="h-[30svh]" alt="UFC Sound" />
+        <span id="ufc-hero-logo" class="relative mb-6 inline-block h-auto px-3 py-1">
+          <img
+            src="src/assets/images/ufc_sound.png"
+            id="ufc-hero-logo"
+            class="max-h-[30svh]"
+            alt="UFC Sound"
+          />
         </span>
         <h1 class="mb-6 text-4xl leading-none font-black tracking-tight uppercase md:text-6xl">
           Novo endereço,<br />novos serviços,<br />o mesmo
-          <span
-            class="from-accent-primary bg-gradient-to-r to-rose-600 bg-clip-text text-transparent"
+          <span class="from-accent-primary bg-linear-to-r to-rose-500 bg-clip-text text-transparent"
             >Padrão UFC</span
           >
         </h1>
@@ -59,22 +69,27 @@
         </p>
         <div class="flex flex-col items-center justify-center gap-4 perspective-normal sm:flex-row">
           <div
-            class="animate-rotate-border rotating-border-conic max-w-sm cursor-pointer rounded-lg transition-all duration-500 ease-out transform-3d hover:scale-[1.03] hover:p-px"
+            class="rotating-border rotating-border--hover max-w-sm rounded-lg transition-all duration-500 ease-out transform-3d"
           >
             <a
               href="#"
               data-cta="hero-primary"
-              class="whatsapp-btn bg-accent-primary block w-full rounded px-8 py-4 text-center font-extrabold tracking-wider text-white uppercase shadow-[0_0_20px_rgba(220,38,38,0.3)] transition-all hover:bg-zinc-800 sm:w-auto"
+              class="whatsapp-btn bg-accent-primary block w-full rounded px-8 py-4 text-center font-extrabold tracking-wider text-white uppercase transition-all duration-500 hover:bg-zinc-900 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)] sm:w-auto"
             >
               Falar com Especialista
             </a>
           </div>
-          <a
-            href="#servicos"
-            class="w-full rounded border border-zinc-800 bg-zinc-900 px-8 py-4 text-center font-bold tracking-wider text-zinc-300 uppercase transition-all hover:bg-zinc-800 sm:w-auto"
+          <div
+            class="rotating-border rotating-border--hover max-w-sm rounded-lg transition-all duration-500 ease-out transform-3d"
           >
-            Conhecer Serviços
-          </a>
+            <a
+              href="#servicos"
+              data-cta="hero-secondary"
+              class="block w-full rounded border border-zinc-800 bg-zinc-900 px-8 py-4 text-center font-bold tracking-wider text-zinc-300 uppercase transition-all duration-500 hover:bg-zinc-800 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)] sm:w-auto"
+            >
+              Conhecer Serviços
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -124,85 +139,99 @@
         </div>
 
         <div class="grid gap-8 md:grid-cols-2">
-          <div
-            class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 p-8 transition-all hover:border-zinc-700"
-          >
-            <div>
-              <div
-                class="bg-accent-primary/10 text-accent-primary mb-6 flex h-12 w-12 items-center justify-center rounded-lg text-xl font-black"
-              >
-                🔊
-              </div>
-              <h3 class="mb-4 text-xl font-bold tracking-tight uppercase md:text-2xl">
-                Som & Personalização
-              </h3>
-              <p class="mb-6 text-sm leading-relaxed text-zinc-400 md:text-base">
-                Projetos de som automotivo sob medida de alta fidelidade. Acabamentos finos em MDF,
-                acrílico, cortes a laser e iluminação em LED personalizada para porta-malas e
-                interiores.
-              </p>
-              <ul class="mb-8 space-y-2.5 text-sm text-zinc-400">
-                <li class="flex items-center gap-2">
-                  <span class="text-accent-primary">✓</span> Caixas acústicas calculadas
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-accent-primary">✓</span> Molduras e acabamentos premium
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-accent-primary">✓</span> Integração multimídia original
-                </li>
-              </ul>
-            </div>
-            <a
-              href="#"
-              data-cta="servico-som"
-              class="whatsapp-btn hover:text-accent-primary block w-full rounded border border-zinc-800 bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:bg-zinc-800"
+          <div class="rotating-border rotating-border--hover max-w-full rounded-2xl">
+            <div
+              class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700"
+              style="background-image: url('src/assets/images/sound.jpg')"
             >
-              Orçamento de Som
-            </a>
+              <div>
+                <div
+                  class="bg-accent-primary/10 text-accent-primary mb-6 flex h-12 w-12 items-center justify-center rounded-lg text-xl font-black"
+                >
+                  🔊
+                </div>
+                <h3 class="mb-4 text-xl font-bold tracking-tight uppercase md:text-2xl">
+                  Som & Personalização
+                </h3>
+                <p class="mb-6 text-sm leading-relaxed text-zinc-400 md:text-base">
+                  Projetos de som automotivo sob medida de alta fidelidade. Acabamentos finos em
+                  MDF, acrílico, cortes a laser e iluminação em LED personalizada para porta-malas e
+                  interiores.
+                </p>
+                <ul class="mb-8 space-y-2.5 text-sm text-zinc-400">
+                  <li class="flex items-center gap-2">
+                    <span class="text-accent-primary">✓</span> Caixas acústicas calculadas
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-accent-primary">✓</span> Molduras e acabamentos premium
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-accent-primary">✓</span> Integração multimídia original
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="rotating-border rotating-border--hover max-w-full rounded-lg transition-all duration-500 ease-out transform-3d"
+              >
+                <a
+                  href="#"
+                  data-cta="servico-som"
+                  class="whatsapp-btn hover:text-accent-primary block w-full rounded bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:bg-zinc-800"
+                >
+                  Orçamento de Som
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div
-            class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 p-8 transition-all hover:border-zinc-700"
-          >
-            <div>
-              <div
-                class="bg-accent-primary/10 text-accent-primary mb-6 flex h-12 w-12 items-center justify-center rounded-lg text-xl font-black"
-              >
-                🛠
-              </div>
-              <h3 class="mb-4 text-xl font-bold tracking-tight uppercase md:text-2xl">
-                Mecânica & Performance
-              </h3>
-              <p class="mb-6 text-sm leading-relaxed text-zinc-400 md:text-base">
-                Manutenção preventiva e corretiva com foco em precisão técnica. Diagnósticos
-                modernos, injeção eletrônica, freios, suspensão e preparação fina com hora marcada.
-              </p>
-              <ul class="mb-8 space-y-2.5 text-sm text-zinc-400">
-                <li class="flex items-center gap-2">
-                  <span class="text-accent-primary">✓</span> Revisões preventivas completas
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-accent-primary">✓</span> Diagnóstico eletrônico via scanner
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-accent-primary">✓</span> Suspensão e freios de alta performance
-                </li>
-              </ul>
-            </div>
-            <a
-              href="#"
-              data-cta="servico-mecanica"
-              class="whatsapp-btn hover:text-accent-primary block w-full rounded border border-zinc-800 bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:bg-zinc-800"
+          <div class="rotating-border rotating-border--hover max-w-full rounded-2xl">
+            <div
+              class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700"
+              style="background-image: url('src/assets/images/motor.jpg')"
             >
-              Agendar Mecânica
-            </a>
+              <div>
+                <div
+                  class="bg-accent-primary/10 text-accent-primary mb-6 flex h-12 w-12 items-center justify-center rounded-lg text-xl font-black"
+                >
+                  🛠
+                </div>
+                <h3 class="mb-4 text-xl font-bold tracking-tight uppercase md:text-2xl">
+                  Mecânica & Performance
+                </h3>
+                <p class="mb-6 text-sm leading-relaxed text-zinc-400 md:text-base">
+                  Manutenção preventiva e corretiva com foco em precisão técnica. Diagnósticos
+                  modernos, injeção eletrônica, freios, suspensão e preparação fina com hora marcada.
+                </p>
+                <ul class="mb-8 space-y-2.5 text-sm text-zinc-400">
+                  <li class="flex items-center gap-2">
+                    <span class="text-accent-primary">✓</span> Revisões preventivas completas
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-accent-primary">✓</span> Diagnóstico eletrônico via scanner
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-accent-primary">✓</span> Suspensão e freios de alta performance
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="rotating-border rotating-border--hover max-w-full rounded-lg transition-all duration-500 ease-out transform-3d"
+              >
+                <a
+                  href="#"
+                  data-cta="servico-mecanica"
+                  class="whatsapp-btn hover:text-accent-primary block w-full max-w-full rounded bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:bg-zinc-800"
+                >
+                  Agendar Mecânica
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="galeria" class="border-t border-zinc-900 bg-zinc-950/50 py-24">
+    <section id="galeria" class="border-t border-rose-700 bg-zinc-950/50 py-24">
       <div class="mx-auto max-w-7xl px-4">
         <div class="mb-12 flex flex-col justify-between sm:flex-row sm:items-end">
           <div>
@@ -210,15 +239,35 @@
             <p class="mt-1 text-zinc-500">Direto da nossa garagem para o seu feed.</p>
           </div>
           <a
-            href="https://youtube.com"
+            href="https://www.instagram.com/ufc_sound/"
             target="_blank"
             class="hover:text-accent-primary mt-4 text-sm font-bold text-zinc-400 transition-colors sm:mt-0"
           >
-            Ver no YouTube →
+            Ver no Instagram →
           </a>
         </div>
 
         <div id="insta-feed-gallery" class="grid grid-cols-2 gap-4 md:grid-cols-4">
+          <div
+            class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase"
+          >
+            Aguardando Feed...
+          </div>
+          <div
+            class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase"
+          >
+            Aguardando Feed...
+          </div>
+          <div
+            class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase"
+          >
+            Aguardando Feed...
+          </div>
+          <div
+            class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase"
+          >
+            Aguardando Feed...
+          </div>
           <div
             class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase"
           >

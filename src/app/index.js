@@ -44,12 +44,64 @@ function initFloatingButtonScroll() {
   });
 }
 
+/**
+ * On touch-only devices, the first tap reveals the rotating border (hover preview)
+ * and the second tap confirms and triggers the WhatsApp action.
+ * Buttons without a .rotating-border--hover wrapper (e.g. floating button) fire immediately.
+ */
+function initTouchHover() {
+  if (!window.matchMedia('(hover: none)').matches) return;
+
+  const buttons = document.querySelectorAll('.whatsapp-btn');
+
+  // Tapping outside any button clears all touch-hover states
+  document.addEventListener(
+    'touchstart',
+    (e) => {
+      for (const btn of buttons) {
+        const wrapper = btn.closest('.rotating-border--hover');
+        if (wrapper && !wrapper.contains(e.target)) {
+          wrapper.classList.remove('is-touch-hovered');
+          btn.classList.remove('is-touch-hovered');
+        }
+      }
+    },
+    { passive: true }
+  );
+
+  for (const btn of buttons) {
+    const wrapper = btn.closest('.rotating-border--hover');
+    if (!wrapper) continue; // floating button has no wrapper — fires directly
+
+    btn.addEventListener('touchend', (e) => {
+      if (!wrapper.classList.contains('is-touch-hovered')) {
+        e.preventDefault(); // block the synthetic click on first tap
+
+        // Clear any other active touch-hover wrappers
+        for (const other of buttons) {
+          const otherWrapper = other.closest('.rotating-border--hover');
+          if (otherWrapper && otherWrapper !== wrapper) {
+            otherWrapper.classList.remove('is-touch-hovered');
+            other.classList.remove('is-touch-hovered');
+          }
+        }
+
+        wrapper.classList.add('is-touch-hovered');
+        btn.classList.add('is-touch-hovered');
+      }
+      // Second tap: preventDefault is NOT called → synthetic click fires → initWhatsAppLinks handles it
+    });
+  }
+}
+
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     initWhatsAppLinks();
     initFloatingButtonScroll();
+    initTouchHover();
   });
 } else {
   initWhatsAppLinks();
   initFloatingButtonScroll();
+  initTouchHover();
 }

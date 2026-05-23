@@ -43,15 +43,89 @@ body {
   initial-value: 0deg;
 }
 
-.rotating-border-conic {
+/* ─── Rotating Border ────────────────────────────────────────────────────────
+   Base class: apply to any wrapper element. The inner content must have its
+   own solid background so the gradient shows only as a 1 px border rim.
+
+   Modifiers:
+     .rotating-border--hover   → border appears only on :hover (use on buttons/CTAs)
+     .rotating-border--visible → border is always visible   (use on cards/static UI)
+   ──────────────────────────────────────────────────────────────────────────── */
+.rotating-border {
   background-image: conic-gradient(
     from var(--border-angle),
     #000 0%,
+    #000 22%,
+    #dc2626 22%,
+    #dc2626 43%,
+    #000 43%,
+    #000 57%,
+    #dc2626 57%,
+    #dc2626 61%,
+    #000 61%,
     #000 78%,
     #dc2626 78%,
     #dc2626 88%,
     #000 88%
   );
+  animation: var(--animate-rotate-border);
+  cursor: pointer;
+}
+
+/* Border reveals on hover; a 1 px margin keeps layout stable when idle */
+.rotating-border--hover {
+  margin: 1px;
+}
+.rotating-border--hover:hover,
+.rotating-border--hover.is-touch-hovered {
+  padding: 1px;
+  margin: 0;
+}
+
+/* Border is permanently visible as a 1 px inset */
+.rotating-border--visible {
+  padding: 1px;
+}
+
+/* ─── Touch-hover state for inner <a> elements ───────────────────────────────
+   Mirrors the :hover styles of each button variant on touch devices.
+   Applied via JS (initTouchHover) on the first tap.
+   ──────────────────────────────────────────────────────────────────────────── */
+.whatsapp-btn.is-touch-hovered {
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+}
+
+.whatsapp-btn[data-cta='header'].is-touch-hovered,
+.whatsapp-btn[data-cta='hero-primary'].is-touch-hovered {
+  background-color: #18181b; /* zinc-900 */
+}
+
+.whatsapp-btn[data-cta='hero-secondary'].is-touch-hovered {
+  background-color: #27272a; /* zinc-800 */
+}
+
+.whatsapp-btn[data-cta='servico-som'].is-touch-hovered,
+.whatsapp-btn[data-cta='servico-mecanica'].is-touch-hovered {
+  background-color: #27272a; /* zinc-800 */
+  color: #dc2626; /* accent-primary */
+}
+
+#ufc-hero-logo:before {
+    background: #fff;
+    content: "";
+    height: 11%;
+    left: 22%;
+    position: absolute;
+    top: 27%;
+    width: 16%;
+    z-index: -1;
+    animation: colorChange 4s infinite
+}
+
+@keyframes colorChange {
+  0% { background-color: #dc2626; }
+  50% { background-color: white; }
+  100% { background-color: #dc2626; }
 }
 
 @theme {
