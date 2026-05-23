@@ -12,8 +12,6 @@
     "url": "https://github.com/doinel1a/vite-vanilla-js"
   },
   "scripts": {
-    "prepare": "husky",
-    "postinstall": "playwright install",
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
