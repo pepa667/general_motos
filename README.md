@@ -1,155 +1,67 @@
-[node]: https://nodejs.org/en
-[pnpm]: https://pnpm.io/installation
-[bun]: https://bun.com/docs/installation
-[yarn]: https://yarnpkg.com/getting-started/install
-[demo]: https://vite-vanilla-js.d1a.app
-[license]: https://github.com/doinel1a/vite-vanilla-js/blob/main/LICENSE
-[code-of-conduct]: https://github.com/doinel1a/vite-vanilla-js/blob/main/CODE_OF_CONDUCT.md
-[issues]: https://github.com/doinel1a/vite-vanilla-js/issues
-[pulls]: https://github.com/doinel1a/vite-vanilla-js/pulls
-[browserslist]: https://browsersl.ist/#q=last+3+versions%2C%3E+0.2%25%2C+not+dead
-[commitlint]: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
-[chrome-icon]: https://github.com/alrra/browser-logos/blob/main/src/chrome/chrome_64x64.png
-[firefox-icon]: https://github.com/alrra/browser-logos/blob/main/src/firefox/firefox_64x64.png
-[edge-icon]: https://github.com/alrra/browser-logos/blob/main/src/edge/edge_64x64.png
-[opera-icon]: https://github.com/alrra/browser-logos/blob/main/src/opera/opera_64x64.png
-[safari-icon]: https://github.com/alrra/browser-logos/blob/main/src/safari/safari_64x64.png
+# UFC Sound — Landing Page Premium
 
-# Vite Vanilla JavaScript — Template
+Landing page de alta performance para a oficina automotiva premium **UFC Sound** (Sorocaba/SP). Desenvolvido com foco em velocidade ultraveloz, SEO otimizado e arquitetura moderna.
 
-This development starter template is the ultimate solution to help you getting started on your project in no time, without the hassle of setting up and configuring your development environment from scratch each time you start working. <br />
-This repository is ideal for front-end developers who want to build modern, fast and reliable web applications with the latest cutting edge technologies such as **JavaScript**, **TailwindCSS 4**, **Vite**, **ESLint**, **Prettier**, **Husky** and much more!
+Este projeto foi construído utilizando como base o template [Vite Vanilla JavaScript Starter](https://github.com/doinel1a/vite-vanilla-js) de @doinel1a, customizado e evoluído para as necessidades específicas da marca.
 
 ---
 
-**[Demo][demo]** &nbsp;&nbsp;**|**&nbsp;&nbsp; **[Bug(label: bug)][issues]** &nbsp;&nbsp;**|**&nbsp;&nbsp; **[Feature(label: enhancement)][issues]**
+**[🌐 Website Online (Netlify)](https://ufc-sound.netlify.app/)**
 
 ---
 
-## :bookmark: Table of contents
+## 🛠️ Stack & Tecnologias
 
-- :computer: [Getting started](#computer-getting-started "Go to 'Getting started' section")
-- :battery: [Features](#battery-features "Go to 'Features' section")
-- :globe_with_meridians: [Browsers support](#globe_with_meridians-browsers-support "Go to 'Browsers support' section")
-- :busts_in_silhouette: [Contribute](#busts_in_silhouette-contribute "Go to 'Contribute' section")
-- :bookmark_tabs: [License](#bookmark_tabs-license "Go to 'License' section")
-- :gem: [Acknowledgements](#gem-acknowledgements "Go to 'Acknowledgements' section")
+- **Runtime & Build:** Node.js + Vite (Vanilla JS)
+- **Estilização:** TailwindCSS v4 (Uso nativo de variáveis `@theme` diretamente no CSS, eliminando o antigo `tailwind.config.js`)
+- **Qualidade de Código:** ESLint + Prettier
+- **Hospedagem & Deploy:** Netlify (Integração contínua automatizada via GitHub)
 
 ---
 
-## :computer: Getting started
+## 🧠 Arquitetura & Modificações do Projeto (ADR)
 
-### Prerequisites
+Para otimizar o fluxo de desenvolvimento solo e garantir agilidade na evolução da página, as seguintes decisões foram tomadas:
 
-1. JavaScript runtime **[node.js][node]**
-2. **(OPTIONAL)** Alternative package manager:
-   - **[bun][bun]** <br /> or
-   - **[pnpm][pnpm]** <br /> or
-   - **[yarn][yarn]**
+### 1. Remoção de Git Hooks (Husky & Commitlint)
+Toda a suíte de validação local (Husky, Commitlint, Lint-staged) foi removida do ambiente de desenvolvimento. Isso agiliza o ciclo de commits diretos durante as janelas de foco de final de semana, removendo travas de formatação de mensagens (Conventional Commits) e permitindo um fluxo livre de desenvolvimento.
 
-### Start developing
-
-1. Get the repository:
-   - click **"Use this template"** &nbsp; or &nbsp; **"Fork"** button <br /> _alternately_
-   - **clone** the repository through your terminal: <br />
-     ```bash
-     git clone https://github.com/doinel1a/vite-vanilla-js YOUR-PROJECT-NAME
-     ```
-2. Decide which package manager you want to use, then delete the unused "**.lock**" file(s)
-3. Open your terminal or code editor to the path your project is located, and run:
-
-   |                                     | **npm**           | **bun**           | **pnpm**       | **yarn**       |
-   | ----------------------------------- | ----------------- | ----------------- | -------------- | -------------- |
-   | **install** dependencies            | `npm install`     | `bun install`     | `pnpm install` | `yarn install` |
-   | **run** the **development server**  | `npm run dev`     | `bun run dev`     | `pnpm dev`     | `yarn dev`     |
-   | **build** your **production app**   | `npm run build`   | `bun run build`   | `pnpm build`   | `yarn build`   |
-   | **preview** your **production app** | `npm run preview` | `bun run preview` | `pnpm preview` | `yarn preview` |
-
-[Back to :arrow_up:](#vite-vanilla-javascript--template "Back to 'Table of contents' section")
+### 2. Estilização Nativa com Tailwind v4
+Adotada a nova especificação do Tailwind v4, centralizando configurações de tokens, fontes e cores diretamente no arquivo CSS principal utilizando diretivas `@theme`. Isso dispensa o uso de arquivos de configuração JavaScript externos e melhora o tempo de build.
 
 ---
 
-## :battery: Features
+## 💻 Como Rodar Localmente
 
-This repository comes 🔋 packed with:
+### Pré-requisitos
+- Node.js instalado.
 
-- **JavaScript**
-- **TailwindCSS 4**
-- **Vite**
-- **SASS** & **SCSS**
-- **ESLint**
-- **Prettier**
-- **Husky**
-- **Commitlint**
-- **Lint staged**
-- **Playwright**
+### Passo a Passo
 
-[Back to :arrow_up:](#vite-vanilla-javascript--template "Back to 'Table of contents' section")
+1. **Instalar as dependências:**
+   ```bash
+   npm install
+   ```
 
----
+2. **Iniciar o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
 
-## :globe_with_meridians: Browsers support
+3. **Gerar build de produção local:**
+   ```bash
+   npm run build
+   ```
 
-The configuration achieves **92.3%** coverage across all major browsers, specifically including:
-
-|            Chrome             |             Firefox              |             Edge             |        Opera         | Safari                       |
-| :---------------------------: | :------------------------------: | :--------------------------: | :------------------: | ---------------------------- |
-| ![Google Chrome][chrome-icon] | ![Mozilla Firefox][firefox-icon] | ![Microsoft Edge][edge-icon] | ![Opera][opera-icon] | ![Apple Safari][safari-icon] |
-
-**\*** In order to support a wider percentage of browsers, update the `.browserslistrc` configuration file:
-
-- `last 3 versions`: browser version
-- `> 0.2%`: browser usage statistics
-- `not dead`: whether the browser is officially supported
-
-Update the configuration [here][browserslist] and check in real-time the **global browsers support**.
-
-**\* The more versions you need to support, the larger the JS and CSS bundle sizes will be.**
-
-[Back to :arrow_up:](#vite-vanilla-javascript--template "Back to 'Table of contents' section")
+4. **Visualizar o build de produção local:**
+   ```bash
+   npm run preview
+   ```
 
 ---
 
-## :busts_in_silhouette: Contribute
+## 📄 Licença & Créditos
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create.  
-Any contribution is greatly appreciated: big or small, it can be documentation updates, adding new features or something bigger.  
-Please check the [**contributing guide**][code-of-conduct] for details on how to help out and keep in mind that all commits must follow the **[conventional commit format][commitlint]**.
-
-### How to contribute:
-
-1.  **[Get started](#computer-getting-started "Go to 'Getting started' section")**
-2.  **For a new feature**
-    1.  Create a new branch: `git checkout -b feat/NEW-FEATURE`
-    2.  Add your changes to the staging area: `git add PATH/TO/FILENAME.EXTENSION`
-    3.  Commit your changes: `git commit -m "feat: NEW FEATURE"`
-    4.  Push your new branch: `git push origin feat/NEW-FEATURE`
-3.  **For a bug fix**
-    1.  Create a new branch: `git checkout -b fix/BUG-FIX`
-    2.  Add your changes to the staging area: `git add PATH/TO/FILENAME.EXTENSION`
-    3.  Commit your changes: `git commit -m "fix: BUG FIX"`
-    4.  Push your new branch: `git push origin fix/BUG-FIX`
-4.  **Open a new [pull request][pulls]**
-
-[Back to :arrow_up:](#vite-vanilla-javascript--template "Back to 'Table of contents' section")
-
----
-
-## :bookmark_tabs: License
-
-All logos and trademarks are the property of their respective owners.  
-Everything else is distributed under the **MIT License**.  
-See the [LICENSE][license] file for more informations.
-
-[Back to :arrow_up:](#vite-vanilla-javascript--template "Back to 'Table of contents' section")
-
----
-
-## :gem: Acknowledgements
-
-Special thanks to:
-
-- [alrra](https://github.com/alrra) for [browser-logos](https://github.com/alrra/browser-logos)
-- [tandpfun](https://github.com/tandpfun) for [skill-icons](https://github.com/tandpfun/skill-icons)
-
-[Back to :arrow_up:](#vite-vanilla-javascript--template "Back to 'Table of contents' section")
+- Base do Template por [@doinel1a](https://github.com/doinel1a).
+- Logotipos de navegadores mantidos sob créditos de [@alrra](https://github.com/alrra).
+- O código customizado e as automações de infraestrutura da UFC Sound estão sob a licença MIT.
