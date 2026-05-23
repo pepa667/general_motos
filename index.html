@@ -1,316 +1,271 @@
 <!doctype html>
 <html lang="pt-BR" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UFC SOUND & MECHANICS | Som Automotivo & Mecânica Premium</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
-  </head>
-  <body
-    class="selection:bg-accent-primary bg-zinc-950 font-sans text-zinc-100 antialiased selection:text-white"
-  >
-    <header
-      class="fixed top-0 left-0 z-50 w-full border-b border-zinc-900 bg-zinc-950/80 backdrop-blur-md"
-    >
-      <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4">
-        <a href="#" class="max-h-full h-auto contents">
-          <object data="src/assets/images/ufc_sound_small.png" type="image/png" class="h-auto md:max-h-[150%] max-h-full md:translate-y-1/3">
-            <div class="text-2xl font-black tracking-tighter">
-              UFC
-              <span class="text-accent-primary -mt-2 block text-sm font-semibold tracking-widest"
-                >SOUND & MECHANICS</span
-              >
-            </div>
-          </object>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UFC SOUND & MECHANICS | Som Automotivo & Mecânica Premium</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+</head>
+
+<body class="selection:bg-accent-primary bg-zinc-950 font-sans text-zinc-100 antialiased selection:text-white">
+  <header class="fixed top-0 left-0 z-50 w-full border-b border-zinc-900 bg-zinc-950/80 backdrop-blur-md">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4">
+      <a href="#" class="max-h-full h-auto contents">
+        <object data="src/assets/images/ufc_sound_small.png" type="image/png"
+          class="h-auto md:max-h-[150%] max-h-full md:translate-y-1/3">
+          <div class="text-2xl font-black tracking-tighter">
+            UFC
+            <span class="text-accent-primary -mt-2 block text-sm font-semibold tracking-widest">SOUND & MECHANICS</span>
+          </div>
+        </object>
+      </a>
+      <nav class="hidden space-x-8 text-sm font-medium tracking-wide text-zinc-400 md:flex">
+        <a href="#sobre" class="hover:text-accent-primary transition-colors">A Oficina</a>
+        <a href="#servicos" class="hover:text-accent-primary transition-colors">Serviços</a>
+        <a href="#galeria" class="hover:text-accent-primary transition-colors">Galeria</a>
+      </nav>
+      <div class="rotating-border rotating-border--hover rounded transition-all duration-300">
+        <a href="#" data-cta="header"
+          class="whatsapp-btn bg-accent-primary block rounded px-5 py-2.5 text-sm font-bold tracking-wider text-white uppercase transition-colors duration-500 hover:bg-zinc-900 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)]">
+          Agendar Hora
         </a>
-        <nav class="hidden space-x-8 text-sm font-medium tracking-wide text-zinc-400 md:flex">
-          <a href="#sobre" class="hover:text-accent-primary transition-colors">A Oficina</a>
-          <a href="#servicos" class="hover:text-accent-primary transition-colors">Serviços</a>
-          <a href="#galeria" class="hover:text-accent-primary transition-colors">Galeria</a>
-        </nav>
-        <div class="rotating-border rotating-border--hover rounded transition-all duration-300">
-          <a
-            href="#"
-            data-cta="header"
-            class="whatsapp-btn bg-accent-primary block rounded px-5 py-2.5 text-sm font-bold tracking-wider text-white uppercase transition-colors duration-500 hover:bg-zinc-900 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)]"
-          >
-            Agendar Hora
-          </a>
-        </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <section
-      class="bg-hero-radial relative flex min-h-screen items-center justify-center overflow-hidden pt-20"
-    >
-      <div class="hero-grid-mask"></div>
+  <section class="bg-hero-radial relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
+    <div class="hero-grid-mask"></div>
 
-      <div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
-        <span id="ufc-hero-logo" class="relative mb-6 inline-block h-auto px-3 py-1">
-          <img
-            src="src/assets/images/ufc_sound.png"
-            id="ufc-hero-logo"
-            class="max-h-[30svh]"
-            alt="UFC Sound"
-          />
-        </span>
-        <h1 class="mb-6 text-4xl leading-none font-black tracking-tight uppercase md:text-6xl">
-          Novo endereço,<br />novos serviços,<br />o mesmo
-          <span class="from-accent-primary bg-linear-to-r to-rose-500 bg-clip-text text-transparent"
-            >Padrão UFC</span
-          >
-        </h1>
-        <p class="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-zinc-400 md:text-xl">
-          Ampliamos nossa garagem para entregar o cuidado completo que seu carro merece: do projeto
-          de áudio sob medida à mecânica de alta precisão.
-        </p>
-        <div class="flex flex-col items-center justify-center gap-4 perspective-normal sm:flex-row">
-          <div
-            class="rotating-border rotating-border--hover max-w-sm rounded-lg transition-all duration-500 ease-out transform-3d"
-          >
-            <a
-              href="#"
-              data-cta="hero-primary"
-              class="whatsapp-btn bg-accent-primary block w-full rounded px-8 py-4 text-center font-extrabold tracking-wider text-white uppercase transition-all duration-500 hover:bg-zinc-900 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)] sm:w-auto"
-            >
-              Falar com Especialista
-            </a>
-          </div>
-          <div
-            class="rotating-border rotating-border--hover max-w-sm rounded-lg transition-all duration-500 ease-out transform-3d"
-          >
-            <a
-              href="#servicos"
-              data-cta="hero-secondary"
-              class="block w-full rounded border border-zinc-800 bg-zinc-900 px-8 py-4 text-center font-bold tracking-wider text-zinc-300 uppercase transition-all duration-500 hover:bg-zinc-800 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)] sm:w-auto"
-            >
-              Conhecer Serviços
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="sobre" class="border-t border-zinc-900 bg-zinc-950 py-24">
-      <div class="mx-auto max-w-7xl px-4">
+    <div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
+      <span id="ufc-hero-logo" class="relative mb-6 inline-block h-auto px-3 py-1">
+        <img src="src/assets/images/ufc_sound.png" id="ufc-hero-logo" class="max-h-[30svh]" alt="UFC Sound" />
+      </span>
+      <h1 class="mb-6 text-4xl leading-none font-black tracking-tight uppercase md:text-6xl">
+        Novo endereço,<br />novos serviços,<br />o mesmo
+        <span class="from-accent-primary bg-linear-to-r to-rose-500 bg-clip-text text-transparent">Padrão UFC</span>
+      </h1>
+      <p class="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-zinc-400 md:text-xl">
+        Ampliamos nossa garagem para entregar o cuidado completo que seu carro merece: do projeto
+        de áudio sob medida à mecânica de alta precisão.
+      </p>
+      <div class="flex flex-col items-center justify-center gap-4 perspective-normal sm:flex-row">
         <div
-          class="flex flex-col items-center justify-between gap-8 rounded-2xl border border-zinc-800 bg-gradient-to-r from-zinc-900 to-zinc-900/50 p-8 md:flex-row md:p-12"
-        >
-          <div class="max-w-xl">
-            <h2 class="mb-4 text-2xl font-black tracking-tight uppercase md:text-3xl">
-              Nova estrutura, a mesma obsessão por performance.
-            </h2>
-            <p class="text-sm leading-relaxed text-zinc-400 md:text-base">
-              Estamos mudando de localização. Nossa nova oficina foi projetada para atender projetos
-              complexos de personalização com hora marcada, garantindo que seu veículo seja tratado
-              de forma exclusiva e sem filas.
-            </p>
-          </div>
-          <div
-            class="w-full shrink-0 rounded-xl border border-zinc-800 bg-zinc-950 p-6 text-left md:w-auto md:text-right"
-          >
-            <span class="mb-1 block text-xs font-bold tracking-widest text-zinc-500 uppercase"
-              >Onde nos encontrar:</span
-            >
-            <p class="font-bold text-zinc-200">Rua Benedito Ferreira Telles, 604</p>
-            <p class="mb-4 text-sm text-zinc-400">Sorocaba / SP</p>
-            <a
-              href="https://maps.google.com"
-              target="_blank"
-              class="text-accent-primary flex items-center gap-1 text-xs font-bold tracking-wider uppercase hover:underline md:justify-end"
-            >
-              Abrir no Google Maps →
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="servicos" class="relative bg-zinc-950 py-24">
-      <div class="mx-auto max-w-7xl px-4">
-        <div class="mb-16 text-center">
-          <h2 class="text-3xl font-black tracking-tight uppercase md:text-5xl">
-            O que fazemos de melhor
-          </h2>
-          <p class="mt-2 text-zinc-500">Duas frentes de engenharia focadas no seu veículo.</p>
-        </div>
-
-        <div class="grid gap-8 md:grid-cols-2">
-          <div class="rotating-border rotating-border--hover max-w-full rounded-2xl">
-            <div
-              class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700"
-              style="background-image: url('src/assets/images/sound.jpg')"
-            >
-              <div>
-                <div
-                  class="bg-accent-primary/10 text-accent-primary mb-6 flex h-12 w-12 items-center justify-center rounded-lg text-xl font-black"
-                >
-                  🔊
-                </div>
-                <h3 class="mb-4 text-xl font-bold tracking-tight uppercase md:text-2xl">
-                  Som & Personalização
-                </h3>
-                <p class="mb-6 text-sm leading-relaxed text-zinc-400 md:text-base">
-                  Projetos de som automotivo sob medida de alta fidelidade. Acabamentos finos em
-                  MDF, acrílico, cortes a laser e iluminação em LED personalizada para porta-malas e
-                  interiores.
-                </p>
-                <ul class="mb-8 space-y-2.5 text-sm text-zinc-400">
-                  <li class="flex items-center gap-2">
-                    <span class="text-accent-primary">✓</span> Caixas acústicas calculadas
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="text-accent-primary">✓</span> Molduras e acabamentos premium
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="text-accent-primary">✓</span> Integração multimídia original
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="rotating-border rotating-border--hover max-w-full rounded-lg transition-all duration-500 ease-out transform-3d"
-              >
-                <a
-                  href="#"
-                  data-cta="servico-som"
-                  class="whatsapp-btn hover:text-accent-primary block w-full rounded bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:bg-zinc-800"
-                >
-                  Orçamento de Som
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="rotating-border rotating-border--hover max-w-full rounded-2xl">
-            <div
-              class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700"
-              style="background-image: url('src/assets/images/motor.jpg')"
-            >
-              <div>
-                <div
-                  class="bg-accent-primary/10 text-accent-primary mb-6 flex h-12 w-12 items-center justify-center rounded-lg text-xl font-black"
-                >
-                  🛠
-                </div>
-                <h3 class="mb-4 text-xl font-bold tracking-tight uppercase md:text-2xl">
-                  Mecânica & Performance
-                </h3>
-                <p class="mb-6 text-sm leading-relaxed text-zinc-400 md:text-base">
-                  Manutenção preventiva e corretiva com foco em precisão técnica. Diagnósticos
-                  modernos, injeção eletrônica, freios, suspensão e preparação fina com hora marcada.
-                </p>
-                <ul class="mb-8 space-y-2.5 text-sm text-zinc-400">
-                  <li class="flex items-center gap-2">
-                    <span class="text-accent-primary">✓</span> Revisões preventivas completas
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="text-accent-primary">✓</span> Diagnóstico eletrônico via scanner
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="text-accent-primary">✓</span> Suspensão e freios de alta performance
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="rotating-border rotating-border--hover max-w-full rounded-lg transition-all duration-500 ease-out transform-3d"
-              >
-                <a
-                  href="#"
-                  data-cta="servico-mecanica"
-                  class="whatsapp-btn hover:text-accent-primary block w-full max-w-full rounded bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:bg-zinc-800"
-                >
-                  Agendar Mecânica
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="galeria" class="border-t border-rose-700 bg-zinc-950/50 py-24">
-      <div class="mx-auto max-w-7xl px-4">
-        <div class="mb-12 flex flex-col justify-between sm:flex-row sm:items-end">
-          <div>
-            <h2 class="text-3xl font-black tracking-tight uppercase">Últimos Projetos</h2>
-            <p class="mt-1 text-zinc-500">Direto da nossa garagem para o seu feed.</p>
-          </div>
-          <a
-            href="https://www.instagram.com/ufc_sound/"
-            target="_blank"
-            class="hover:text-accent-primary mt-4 text-sm font-bold text-zinc-400 transition-colors sm:mt-0"
-          >
-            Ver no Instagram →
+          class="rotating-border rotating-border--hover max-w-sm rounded-lg transition-all duration-500 ease-out transform-3d">
+          <a href="#" data-cta="hero-primary"
+            class="whatsapp-btn bg-accent-primary block w-full rounded px-8 py-4 text-center font-extrabold tracking-wider text-white uppercase transition-all duration-500 hover:bg-zinc-900 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)] sm:w-auto">
+            Falar com Especialista
           </a>
         </div>
+        <div
+          class="rotating-border rotating-border--hover max-w-sm rounded-lg transition-all duration-500 ease-out transform-3d">
+          <a href="#servicos" data-cta="hero-secondary"
+            class="block w-full rounded border border-zinc-800 bg-zinc-900 px-8 py-4 text-center font-bold tracking-wider text-zinc-300 uppercase transition-all duration-500 hover:bg-zinc-800 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)] sm:w-auto">
+            Conhecer Serviços
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div id="insta-feed-gallery" class="grid grid-cols-2 gap-4 md:grid-cols-4">
+  <section id="sobre" class="border-t border-zinc-900 bg-zinc-950 py-24">
+    <div class="mx-auto max-w-7xl px-4">
+      <div
+        class="flex flex-col items-center justify-between gap-8 rounded-2xl border border-zinc-800 bg-gradient-to-r from-zinc-900 to-zinc-900/50 p-8 md:flex-row md:p-12">
+        <div class="max-w-xl">
+          <h2 class="mb-4 text-2xl font-black tracking-tight uppercase md:text-3xl">
+            Nova estrutura, a mesma obsessão por performance.
+          </h2>
+          <p class="text-sm leading-relaxed text-zinc-400 md:text-base">
+            Estamos mudando de localização. Nossa nova oficina foi projetada para atender projetos
+            complexos de personalização com hora marcada, garantindo que seu veículo seja tratado
+            de forma exclusiva e sem filas.
+          </p>
+        </div>
+        <div
+          class="w-full shrink-0 rounded-xl border border-zinc-800 bg-zinc-950 p-6 text-left md:w-auto md:text-right">
+          <span class="mb-1 block text-xs font-bold tracking-widest text-zinc-500 uppercase">Onde nos encontrar:</span>
+          <p class="font-bold text-zinc-200">Rua Benedito Ferreira Telles, 604</p>
+          <p class="mb-4 text-sm text-zinc-400">Sorocaba / SP</p>
+          <a href="https://maps.google.com" target="_blank"
+            class="text-accent-primary flex items-center gap-1 text-xs font-bold tracking-wider uppercase hover:underline md:justify-end">
+            Abrir no Google Maps →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="border-t border-zinc-900 bg-zinc-950 relative flex min-h-[70svh] items-end justify-center" id="hightlight">
+    <div class="absolute inset-0 overflow-hidden">
+      <video autoplay muted loop playsinline id="background-video" class="absolute inset-0 h-full w-full object-cover opacity-30">
+        <source src="/src/assets/videos/video_bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-zinc-950/20"></div>
+    </div>
+    <div class="relative z-10 mx-auto max-w-7xl px-4 py-24 text-center">
+      <h3 class="text-2xl font-black tracking-tight uppercase md:text-2xl from-accent-primary bg-linear-to-r to-rose-500 bg-clip-text text-transparent">
+        Infraestrutura de ponta para projetos de som e mecânica.
+      </h3>
+    </div>
+  </section>
+  <section id="servicos" class="relative bg-zinc-950 py-24">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="mb-16 text-center">
+        <h2 class="text-3xl font-black tracking-tight uppercase md:text-5xl">
+          O que fazemos de melhor
+        </h2>
+        <p class="mt-2 text-zinc-500">Duas frentes de engenharia focadas no seu veículo.</p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="rotating-border rotating-border--hover max-w-full rounded-2xl">
           <div
-            class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase"
-          >
-            Aguardando Feed...
+            class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700"
+            style="background-image: url('src/assets/images/sound.jpg')">
+            <div>
+              <div
+                class="bg-accent-primary/10 text-accent-primary mb-6 flex h-12 w-12 items-center justify-center rounded-lg text-xl font-black">
+                🔊
+              </div>
+              <h3 class="mb-4 text-xl font-bold tracking-tight uppercase md:text-2xl">
+                Som & Personalização
+              </h3>
+              <p class="mb-6 text-sm leading-relaxed text-zinc-400 md:text-base">
+                Projetos de som automotivo sob medida de alta fidelidade. Acabamentos finos em
+                MDF, acrílico, cortes a laser e iluminação em LED personalizada para porta-malas e
+                interiores.
+              </p>
+              <ul class="mb-8 space-y-2.5 text-sm text-zinc-400">
+                <li class="flex items-center gap-2">
+                  <span class="text-accent-primary">✓</span> Caixas acústicas calculadas
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-accent-primary">✓</span> Molduras e acabamentos premium
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-accent-primary">✓</span> Integração multimídia original
+                </li>
+              </ul>
+            </div>
+            <div
+              class="rotating-border rotating-border--hover max-w-full rounded-lg transition-all duration-500 ease-out transform-3d">
+              <a href="#" data-cta="servico-som"
+                class="whatsapp-btn hover:text-accent-primary block w-full rounded bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:bg-zinc-800">
+                Orçamento de Som
+              </a>
+            </div>
           </div>
+        </div>
+
+        <div class="rotating-border rotating-border--hover max-w-full rounded-2xl">
           <div
-            class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase"
-          >
-            Aguardando Feed...
-          </div>
-          <div
-            class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase"
-          >
-            Aguardando Feed...
-          </div>
-          <div
-            class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase"
-          >
-            Aguardando Feed...
-          </div>
-          <div
-            class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase"
-          >
-            Aguardando Feed...
-          </div>
-          <div
-            class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase"
-          >
-            Aguardando Feed...
-          </div>
-          <div
-            class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase"
-          >
-            Aguardando Feed...
-          </div>
-          <div
-            class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase"
-          >
-            Aguardando Feed...
+            class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700"
+            style="background-image: url('src/assets/images/motor.jpg')">
+            <div>
+              <div
+                class="bg-accent-primary/10 text-accent-primary mb-6 flex h-12 w-12 items-center justify-center rounded-lg text-xl font-black">
+                🛠
+              </div>
+              <h3 class="mb-4 text-xl font-bold tracking-tight uppercase md:text-2xl">
+                Mecânica & Performance
+              </h3>
+              <p class="mb-6 text-sm leading-relaxed text-zinc-400 md:text-base">
+                Manutenção preventiva e corretiva com foco em precisão técnica. Diagnósticos
+                modernos, injeção eletrônica, freios, suspensão e preparação fina com hora marcada.
+              </p>
+              <ul class="mb-8 space-y-2.5 text-sm text-zinc-400">
+                <li class="flex items-center gap-2">
+                  <span class="text-accent-primary">✓</span> Revisões preventivas completas
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-accent-primary">✓</span> Diagnóstico eletrônico via scanner
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-accent-primary">✓</span> Suspensão e freios de alta performance
+                </li>
+              </ul>
+            </div>
+            <div
+              class="rotating-border rotating-border--hover max-w-full rounded-lg transition-all duration-500 ease-out transform-3d">
+              <a href="#" data-cta="servico-mecanica"
+                class="whatsapp-btn hover:text-accent-primary block w-full max-w-full rounded bg-zinc-950 py-3.5 text-center text-sm font-bold tracking-wider text-zinc-300 uppercase transition-all hover:bg-zinc-800">
+                Agendar Mecânica
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer
-      class="border-t border-zinc-900 bg-zinc-950 py-12 text-center text-xs tracking-wide text-zinc-600"
-    >
-      <p class="mb-2">© 2026 UFC SOUND & MECHANICS. Todos os direitos reservados.</p>
-      <p>Atendimento exclusivo com hora marcada • Sorocaba / SP</p>
-    </footer>
+  <section id="galeria" class="border-t border-rose-700 bg-zinc-950/50 py-24">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="mb-12 flex flex-col justify-between sm:flex-row sm:items-end">
+        <div>
+          <h2 class="text-3xl font-black tracking-tight uppercase">Últimos Projetos</h2>
+          <p class="mt-1 text-zinc-500">Direto da nossa garagem para o seu feed.</p>
+        </div>
+        <a href="https://www.instagram.com/ufc_sound/" target="_blank"
+          class="hover:text-accent-primary mt-4 text-sm font-bold text-zinc-400 transition-colors sm:mt-0">
+          Ver no Instagram →
+        </a>
+      </div>
 
-    <a
-      href="#"
-      id="floating-whatsapp"
-      class="whatsapp-btn pointer-events-none fixed right-6 bottom-6 z-50 translate-y-10 rounded-full bg-emerald-500 p-4 text-white opacity-0 shadow-2xl transition-all duration-300 hover:bg-emerald-600"
-    >
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-        <path
-          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.296 1.489 4.93 1.49 5.361 0 9.749-4.305 9.752-9.605.001-2.568-1.002-4.979-2.825-6.793C16.68 2.431 14.269 1.43 11.72 1.43 6.361 1.43 1.974 5.735 1.971 11.036c-.001 1.742.476 3.442 1.391 4.912l-.982 3.593 3.667-.957z"
-        />
-      </svg>
-    </a>
+      <div id="insta-feed-gallery" class="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div
+          class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+          Aguardando Feed...
+        </div>
+        <div
+          class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+          Aguardando Feed...
+        </div>
+        <div
+          class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+          Aguardando Feed...
+        </div>
+        <div
+          class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+          Aguardando Feed...
+        </div>
+        <div
+          class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+          Aguardando Feed...
+        </div>
+        <div
+          class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+          Aguardando Feed...
+        </div>
+        <div
+          class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+          Aguardando Feed...
+        </div>
+        <div
+          class="flex aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+          Aguardando Feed...
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script type="module" src="/src/app/index.js"></script>
-  </body>
+  <footer class="border-t border-zinc-900 bg-zinc-950 py-12 text-center text-xs tracking-wide text-zinc-600">
+    <p class="mb-2">© 2026 UFC SOUND & MECHANICS. Todos os direitos reservados.</p>
+    <p>Atendimento exclusivo com hora marcada • Sorocaba / SP</p>
+  </footer>
+
+  <a href="#" id="floating-whatsapp"
+    class="whatsapp-btn pointer-events-none fixed right-6 bottom-6 z-50 translate-y-10 rounded-full bg-emerald-500 p-4 text-white opacity-0 shadow-2xl transition-all duration-300 hover:bg-emerald-600">
+    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.296 1.489 4.93 1.49 5.361 0 9.749-4.305 9.752-9.605.001-2.568-1.002-4.979-2.825-6.793C16.68 2.431 14.269 1.43 11.72 1.43 6.361 1.43 1.974 5.735 1.971 11.036c-.001 1.742.476 3.442 1.391 4.912l-.982 3.593 3.667-.957z" />
+    </svg>
+  </a>
+
+  <script type="module" src="/src/app/index.js"></script>
+</body>
+
 </html>
