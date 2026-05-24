@@ -1,0 +1,33 @@
+# Template para repo cliente
+# Copie para .github/workflows/update-instagram.yml no repo do cliente.
+#
+# Secrets a configurar no repo cliente (Settings → Secrets → Actions):
+#   SCRAPER_API_KEY  — chave da conta scrape.do (pode ser compartilhada entre clientes)
+#   INSTA_USERNAME   — username do Instagram deste cliente (ex: luaink.tattoo)
+#   INSTA_SESSION_ID — cookie sessionid do Instagram deste cliente
+#     Como obter: Chrome → instagram.com → F12 → Application → Cookies → sessionid
+#
+# O script e a lógica de scraping ficam no repo central — zero manutenção no cliente.
+
+name: update-instagram-feed
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # Diário às 02:00 UTC — ajuste para não colidir com outros clientes
+  workflow_dispatch:
+
+jobs:
+  update-feed:
+    uses: pepa667/insta-scraper/.github/workflows/scrape-reusable.yml@main
+    with:
+      # Todos os inputs abaixo são opcionais — remova os que não precisar alterar.
+      post_count: 8             # Quantos posts baixar
+      image_prefix: photo_  # Prefixo dos ficheiros: photo_01.jpg, photo_02.jpg…
+      image_ext: jpg            # Extensão dos ficheiros de imagem
+      images_dir: public/ig_photos          # Pasta destino das imagens (relativa ao repo)
+      images_public_path: ig_photos      # Caminho público usado no insta-links.json
+      links_json_path: public/ig_photos/insta-links.json # Caminho do JSON de output
+    secrets:
+      SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
+      INSTA_USERNAME: ${{ secrets.INSTA_USERNAME }}
+      INSTA_SESSION_ID: ${{ secrets.INSTA_SESSION_ID }}
