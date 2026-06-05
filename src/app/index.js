@@ -1,17 +1,21 @@
-// IMPORTANTE: Ajustado para o nome real do seu arquivo de estilos
+// FIX: Ajustado para subir um nível a partir de /src/app/ e encontrar o globals.css em /src/
 import '../styles/globals.css';
 
 const WHATSAPP_PHONE = '5515981661573';
 
+// FIX: Adicionado 'servico-pecas' para bater com o data-cta do HTML
 const MESSAGES = {
-  header: 'Olá! Conheci o site da UFC e gostaria de agendar um horário de atendimento.',
+  header:
+    'Olá! Conheci o site da General Moto Peças e gostaria de agendar um horário de atendimento para minha moto.',
   'hero-primary':
-    'Olá! Acessei o site da UFC e gostaria de falar com um especialista sobre um projeto para o meu carro.',
-  'hero-secondary': 'Olá! Gostaria de conhecer melhor os serviços da UFC SOUND & MECHANICS.',
-  'servico-som':
-    'Olá! Gostaria de fazer um orçamento para um projeto de Som Automotivo personalizado.',
-  'servico-mecanica': 'Olá! Gostaria de agendar uma revisão de Mecânica Premium com hora marcada.',
-  default: 'Olá! Gostaria de mais informações sobre os serviços da UFC SOUND & MECHANICS.'
+    'Olá! Acessei o site da General Moto Peças e gostaria de fazer um orçamento de peças/serviços.',
+  'hero-secondary': 'Olá! Gostaria de conhecer melhor os serviços da oficina e motopeças.',
+  'servico-mecanica': 'Olá! Gostaria de agendar uma revisão mecânica para a minha moto.',
+  'servico-pecas':
+    'Olá! Gostaria de consultar a disponibilidade de peças ou solicitar o serviço de socorro/resgate.',
+  'servico-eletrica':
+    'Olá! Gostaria de agendar um diagnóstico ou serviço elétrico na unidade dedicada.',
+  default: 'Olá! Gostaria de mais informações sobre os serviços da General Moto Peças.'
 };
 
 function initWhatsAppModal() {
@@ -78,22 +82,20 @@ function initFloatingButtonScroll() {
 }
 
 function initScrollActivation() {
-  // Only on touch devices (pointer: coarse = finger, not mouse)
   if (!globalThis.matchMedia('(pointer: coarse)').matches) return;
 
   window.addEventListener('scroll', () => {
+    const agendaWrapper = document.querySelector('#agenda-btn-wrapper');
+    if (!agendaWrapper) return;
+
     if (window.scrollY > document.body.scrollHeight - window.innerHeight - 300) {
-      document.querySelector('#agenda-btn-wrapper').classList.toggle('is-center', true);
-      document
-        .querySelector('#agenda-btn-wrapper')
-        .querySelector('a')
-        .classList.toggle('active', true);
+      agendaWrapper.classList.toggle('is-center', true);
+      const link = agendaWrapper.querySelector('a');
+      if (link) link.classList.toggle('active', true);
     } else {
-      document.querySelector('#agenda-btn-wrapper').classList.toggle('is-center', false);
-      document
-        .querySelector('#agenda-btn-wrapper')
-        .querySelector('a')
-        .classList.toggle('active', false);
+      agendaWrapper.classList.toggle('is-center', false);
+      const link = agendaWrapper.querySelector('a');
+      if (link) link.classList.toggle('active', false);
     }
   });
 

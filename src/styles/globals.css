@@ -1,24 +1,42 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-@theme inline {
+@theme {
+  /* Cores Base */
   --color-primary: #262626; /* neutral-800 - Fundo/Textos */
   --color-secondary: #171717; /* neutral-900 - Backgrounds alternativos */
   --color-tertiary: #404040; /* neutral-700 - Bordas/Divisores */
   --color-color: #f3f3f3; /* neutral-100 - Texto principal */
 
-  /* 🔥 ATUALIZAÇÃO DO ACCENT COLOR: Vermelho Performance UFC */
-  --color-accent-primary: #dc2626; /* Tailwind red-600 - Vibrante e Premium */
-  --color-accent-primary-state: #b91c1c; /* Tailwind red-700 - Hover state */
+  /* Identidade Visual: Vermelho Performance */
+  --color-accent-primary: #dc2626; /* Tailwind red-600 */
+  --color-accent-primary-state: #b91c1c; /* Tailwind red-700 */
+
+  /* Animações customizadas integradas ao motor do Tailwind v4 */
+  --animate-rotate-border: border-rotate 3s linear infinite;
+  --animate-mecanica-glow: mecanica-glow 1.8s ease-in-out infinite;
+
+  @keyframes border-rotate {
+    to {
+      --border-angle: 360deg;
+    }
+  }
+
+  @keyframes mecanica-glow {
+    0%, 100% {
+      box-shadow: 0 0 2px rgba(255, 255, 255, 0.1), 0 0 4px rgba(253, 164, 164, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(220, 38, 38, 0.9), 0 0 14px rgba(190, 24, 24, 1);
+    }
+  }
 }
 
-/* Resto do seu CSS (html, body, keyframes, etc.) permanece igual... */
 html,
 body {
   width: 100%;
   height: 100%;
 }
-/* ... resto do arquivo image_9.png ... */
 
 .bg-hero-radial {
   background-image: radial-gradient(ellipse at top, #ea003d2e, #09090b);
@@ -43,14 +61,7 @@ body {
   initial-value: 0deg;
 }
 
-/* ─── Rotating Border ────────────────────────────────────────────────────────
-   Base class: apply to any wrapper element. The inner content must have its
-   own solid background so the gradient shows only as a 1 px border rim.
-
-   Modifiers:
-     .rotating-border--hover   → border appears only on :hover (use on buttons/CTAs)
-     .rotating-border--visible → border is always visible   (use on cards/static UI)
-   ──────────────────────────────────────────────────────────────────────────── */
+/* ─── Rotating Border ──────────────────────────────────────────────────────── */
 .rotating-border {
   background-image: conic-gradient(
     from var(--border-angle),
@@ -69,10 +80,8 @@ body {
     #000 88%
   );
   animation: var(--animate-rotate-border);
-  /* cursor: pointer; */
 }
 
-/* Border reveals on hover; a 1 px margin keeps layout stable when idle */
 .rotating-border--hover {
   margin: 1px;
 }
@@ -82,7 +91,6 @@ body {
   margin: 0;
 }
 
-/* Smooth filter transition for scroll-activation on touch devices */
 .rotating-border--hover > a,
 .rotating-border--hover > button {
   transition-property: background-color, box-shadow, filter;
@@ -90,21 +98,21 @@ body {
   transition-timing-function: ease;
 }
 
-/* Border is permanently visible as a 1 px inset */
 .rotating-border--visible {
   padding: 1px;
 }
 
-#ufc-hero-logo:before {
-    background: #fff;
-    content: "";
-    height: 11%;
-    left: 22%;
-    position: absolute;
-    top: 27%;
-    width: 16%;
-    z-index: -1;
-    animation: colorChange 4s infinite
+/* Ajustado para o logo da General Moto Peças */
+#general-hero-logo:before {
+  background: #fff;
+  content: "";
+  height: 11%;
+  left: 22%;
+  position: absolute;
+  top: 27%;
+  width: 16%;
+  z-index: -1;
+  animation: colorChange 4s infinite;
 }
 
 @keyframes colorChange {
@@ -112,41 +120,6 @@ body {
   50% { background-color: white; }
   100% { background-color: #dc2626; }
 }
-
-@theme {
-  --animate-rotate-border: border-rotate 3s linear infinite;
-  --animate-mecanica-glow : mecanica-glow 1.8s ease-in-out infinite;
-
-  @keyframes border-rotate {
-    to {
-      --border-angle: 360deg;
-    }
-  }
-
-  @keyframes mecanica-glow {
-    0%, 100% {
-      box-shadow: 0 0 2px color-mix(in srgb, var(--color-white) 10%, transparent), 0 0 4px color-mix(in srgb, var(--color-rose-300) 70%, transparent);
-    }
-    50% {
-      box-shadow: 0 0 25px color-mix(in srgb, var(--color-accent-primary) 90%, transparent), 0 0 14px color-mix(in srgb, var(--color-rose-700) 100%, transparent);
-    }
-  }
-}
-
-
-/* Optional: Add a dark overlay to make text more readable */
-/* .video-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-} */
-
-
 
 .github-corner:hover .octo-arm {
   animation: octocat-wave 560ms ease-in-out;
