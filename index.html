@@ -14,23 +14,24 @@
 <body class="selection:bg-red-600 bg-zinc-950 font-sans text-zinc-100 antialiased selection:text-white">
   <header class="fixed top-0 left-0 z-50 w-full border-b border-zinc-900 bg-zinc-950/80 backdrop-blur-md">
     <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4">
-<a href="#" class="max-h-full h-auto flex items-center">
-  <!-- O Object carrega o logo completo do SVG. Se carregar, some tudo o que tá dentro dele -->
-  <object data="/src/assets/images/gal_motos.svg" type="image/svg+xml" class="h-12 w-auto pointer-events-none">
-    
-    <!-- FALLBACK COMPLETO: Só renderiza se o SVG falhar. Envelopado para manter o alinhamento perfeito -->
-    <div class="flex items-center gap-3">
-      <div class="flex h-11 w-11 items-center justify-center rounded border border-red-600/30 bg-zinc-900 text-2xl font-black tracking-tighter text-red-600">
-        G
-      </div>
-      <div class="flex flex-col justify-center text-left">
-        <span class="text-lg font-black tracking-tight leading-none uppercase text-zinc-100">General</span>
-        <span class="text-xs font-bold tracking-widest text-zinc-500 uppercase">Moto Peças</span>
-      </div>
-    </div>
+      <a href="#" class="max-h-full h-auto flex items-center">
+        <!-- O Object carrega o logo completo do SVG. Se carregar, some tudo o que tá dentro dele -->
+        <object data="/src/assets/images/gal_motos.svg" type="image/svg+xml" class="h-12 w-auto pointer-events-none">
 
-  </object>
-</a>
+          <!-- FALLBACK COMPLETO: Só renderiza se o SVG falhar. Envelopado para manter o alinhamento perfeito -->
+          <div class="flex items-center gap-3">
+            <div
+              class="flex h-11 w-11 items-center justify-center rounded border border-red-600/30 bg-zinc-900 text-2xl font-black tracking-tighter text-red-600">
+              G
+            </div>
+            <div class="flex flex-col justify-center text-left">
+              <span class="text-lg font-black tracking-tight leading-none uppercase text-zinc-100">General</span>
+              <span class="text-xs font-bold tracking-widest text-zinc-500 uppercase">Moto Peças</span>
+            </div>
+          </div>
+
+        </object>
+      </a>
       <nav class="hidden space-x-8 text-sm font-medium tracking-wide text-zinc-400 md:flex">
         <a href="#sobre" class="hover:text-red-600 transition-colors">A Oficina</a>
         <a href="#emergencia" class="hover:text-red-600 transition-colors text-red-500 font-bold">🚨 SOCORRO RÁPIDO</a>
@@ -46,12 +47,15 @@
     </div>
   </header>
 
-  <section class="bg-hero-radial relative flex min-h-fit pb-16 items-center justify-between overflow-hidden pt-20 h-full">
+  <section
+    class="bg-hero-radial relative flex min-h-fit pb-16 items-center justify-between overflow-hidden pt-20 h-full">
     <div class="hero-grid-mask"></div>
 
-    <div class="relative z-10 mx-auto max-w-4xl px-4 text-center min-h-max h-auto flex flex-col items-center justify-center">
+    <div
+      class="relative z-10 mx-auto max-w-4xl px-4 text-center min-h-max h-auto flex flex-col items-center justify-center">
       <span class="relative mb-6 inline-block h-auto px-3 py-1">
-        <object data="/src/assets/images/gal_motos.svg" type="image/svg+xml" id="general-hero-logo" class="max-h-[25svh] max-w-[80svw] w-auto drop-shadow-[0_0_35px_rgba(220,38,38,0.2)] pointer-events-none h-40">
+        <object data="/src/assets/images/gal_motos.svg" type="image/svg+xml" id="general-hero-logo"
+          class="max-h-[25svh] max-w-[80svw] w-auto drop-shadow-[0_0_35px_rgba(220,38,38,0.2)] pointer-events-none h-40">
           <div class="text-6xl font-black text-red-600">GENERAL</div>
         </object>
       </span>
@@ -60,17 +64,20 @@
         <span class="from-red-600 bg-linear-to-r to-rose-500 bg-clip-text text-transparent">Reconhecida na Cidade</span>
       </h1>
       <p class="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-zinc-400 md:text-xl">
-        Sua oficina mecânica de bairro com estrutura completa. Estoque amplo de motopeças, elétrica especializada e a segurança que quem roda no dia a dia precisa.
+        Sua oficina mecânica de bairro com estrutura completa. Estoque amplo de motopeças, elétrica especializada e a
+        segurança que quem roda no dia a dia precisa.
       </p>
       <div class="flex flex-col items-center justify-between gap-8 gap-y-16 perspective-normal sm:flex-row h-auto">
-        <div class="rotating-border rotating-border--hover max-w-sm rounded-lg transition-all duration-500 ease-out transform-3d">
+        <div
+          class="rotating-border rotating-border--hover max-w-sm rounded-lg transition-all duration-500 ease-out transform-3d">
           <a href="#" data-cta="hero-primary"
             class="whatsapp-btn block w-full rounded border border-zinc-800 bg-red-700 px-8 py-4 text-center font-bold tracking-wider text-zinc-300 uppercase transition-all duration-500 hover:bg-zinc-800 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)] sm:w-auto [&.active]:bg-zinc-800">
-            
+
             Chamar no WhatsApp
           </a>
         </div>
-        <div class="rotating-border rotating-border--hover max-w-sm rounded-lg transition-all duration-500 ease-out transform-3d">
+        <div
+          class="rotating-border rotating-border--hover max-w-sm rounded-lg transition-all duration-500 ease-out transform-3d">
           <a href="#servicos" data-cta="hero-secondary"
             class="block w-full rounded border border-zinc-800 bg-zinc-900 px-8 py-4 text-center font-bold tracking-wider text-zinc-300 uppercase transition-all duration-500 hover:bg-zinc-800 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)] sm:w-auto">
             Ver Peças & Serviços
@@ -80,11 +87,14 @@
     </div>
   </section>
 
-  <section id="emergencia" class="relative z-20 border-y border-red-900/50 bg-linear-to-b from-red-950/30 to-zinc-950 py-12 shadow-[inset_0_0_30px_rgba(220,38,38,0.05)]">
+  <section id="emergencia"
+    class="relative z-20 border-y border-red-900/50 bg-linear-to-b from-red-950/30 to-zinc-950 py-12 shadow-[inset_0_0_30px_rgba(220,38,38,0.05)]">
     <div class="mx-auto max-w-5xl px-4">
-      <div class="flex flex-col items-center justify-between gap-6 rounded-xl border border-red-600/30 bg-zinc-900/90 p-6 shadow-2xl md:flex-row md:p-8">
+      <div
+        class="flex flex-col items-center justify-between gap-6 rounded-xl border border-red-600/30 bg-zinc-900/90 p-6 shadow-2xl md:flex-row md:p-8">
         <div class="flex items-center gap-4 text-center md:text-left flex-col md:flex-row">
-          <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-red-600 text-2xl animate-pulse">
+          <div
+            class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-red-600 text-2xl animate-pulse">
             🚨
           </div>
           <div>
@@ -92,7 +102,8 @@
               Moto Travada? Pane no Caminho?
             </h2>
             <p class="text-xs text-zinc-400 md:text-sm max-w-xl">
-              Ativamos o nosso serviço de **Socorro e Resgate com Guincho** para buscar você e sua moto em qualquer ponto da região de Sorocaba. Sem enrolação.
+              Ativamos o nosso serviço de **Socorro e Resgate com Guincho** para buscar você e sua moto em qualquer
+              ponto da região de Sorocaba. Sem enrolação.
             </p>
           </div>
         </div>
@@ -108,43 +119,52 @@
 
   <section id="sobre" class="border-t border-zinc-900 bg-zinc-950 py-24">
     <div class="mx-auto max-w-7xl px-4">
-      <div class="flex flex-col items-center justify-between gap-8 rounded-2xl border border-zinc-800 bg-gradient-to-r from-zinc-900 to-zinc-900/50 p-8 md:flex-row md:p-12">
+      <div
+        class="flex flex-col items-center justify-between gap-8 rounded-2xl border border-zinc-800 bg-gradient-to-r from-zinc-900 to-zinc-900/50 p-8 md:flex-row md:p-12">
         <div class="max-w-xl">
           <h2 class="mb-4 text-2xl font-black tracking-tight uppercase md:text-3xl">
             Uma oficina simples, tradicional e de confiança.
           </h2>
           <p class="text-sm leading-relaxed text-zinc-400 md:text-base">
-            A General Moto Peças é sinônimo de honestidade e excelência em Sorocaba. Atendemos todas as marcas e cilindradas com agilidade e preço justo. Seja para uma revisão de rotina ou manutenção complexa, nosso time resolve o seu problema sem complicação.
+            A General Moto Peças é sinônimo de honestidade e excelência em Sorocaba. Atendemos todas as marcas e
+            cilindradas com agilidade e preço justo. Seja para uma revisão de rotina ou manutenção complexa, nosso time
+            resolve o seu problema sem complicação.
           </p>
         </div>
         <div class="w-full shrink-0 rounded-xl border border-zinc-800 bg-zinc-950 p-6 text-left md:w-80">
-          <span class="mb-2 block text-xs font-bold tracking-widest text-zinc-500 uppercase">Dois Endereços (No mesmo quarteirão):</span>
-          
+          <span class="mb-2 block text-xs font-bold tracking-widest text-zinc-500 uppercase">Dois Endereços (No mesmo
+            quarteirão):</span>
+
           <div class="mb-4">
             <p class="text-sm font-bold text-zinc-200">📍 Oficina Principal & Peças</p>
-            <p class="text-xs text-zinc-400">Rua Benedito Ferreira Telles, 604 • Sorocaba / SP</p>
-            <a href="https://maps.google.com" target="_blank" class="text-red-600 inline-block mt-1 text-xs font-semibold hover:underline">Como chegar →</a>
+            <p class="text-xs text-zinc-400">Rua NoNSOnONoNonOno, 854 • Sorocaba / SP</p>
+            <a href="https://maps.google.com" target="_blank"
+              class="text-red-600 inline-block mt-1 text-xs font-semibold hover:underline">Como chegar →</a>
           </div>
 
           <div class="border-t border-zinc-900 pt-3">
             <p class="text-sm font-bold text-zinc-200">📍 Unidade de Elétrica & Suporte</p>
-            <p class="text-xs text-zinc-400">Rua Benedito Ferreira Telles (Mesmo Quarteirão) • Sorocaba / SP</p>
-            <a href="https://maps.google.com" target="_blank" class="text-red-600 inline-block mt-1 text-xs font-semibold hover:underline">Como chegar →</a>
+            <p class="text-xs text-zinc-400">Rua NoNSOnONoNonOno (Mesmo Quarteirão) • Sorocaba / SP</p>
+            <a href="https://maps.google.com" target="_blank"
+              class="text-red-600 inline-block mt-1 text-xs font-semibold hover:underline">Como chegar →</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="border-t border-zinc-900 bg-zinc-950 relative flex min-h-[75svh] items-end justify-center h-[120svh] " id="hightlight">
+  <section class="border-t border-zinc-900 bg-zinc-950 relative flex min-h-[75svh] items-end justify-center h-[120svh] "
+    id="hightlight">
     <div class="absolute inset-0 overflow-hidden">
-      <video autoplay muted loop playsinline id="background-video" class="absolute inset-0 h-full w-full object-cover object-top opacity-50">
+      <video autoplay muted loop playsinline id="background-video"
+        class="absolute inset-0 h-full w-full object-cover object-top opacity-50">
         <source src="/src/assets/videos/biker.mp4" type="video/mp4">
       </video>
       <div class="absolute inset-0 bg-linear-to-t from-zinc-950 via-zinc-950/60 to-zinc-950/20"></div>
     </div>
     <div class="relative z-10 mx-auto max-w-7xl px-4 pb-[45svh] text-center">
-      <h3 class="text-2xl font-black tracking-tight uppercase md:text-3xl from-red-600 bg-linear-to-r to-rose-500 bg-clip-text text-transparent">
+      <h3
+        class="text-2xl font-black tracking-tight uppercase md:text-3xl from-red-600 bg-linear-to-r to-rose-500 bg-clip-text text-transparent">
         Do Quarto de Litro às Altas Cilindradas: Mecânica sem Enrolação.
       </h3>
     </div>
@@ -160,17 +180,22 @@
       </div>
 
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="rotating-border--hover max-w-full rounded-2xl p-px bg-zinc-950 hover:bg-accent-primary [&.is-center]:animate-mecanica-glow hover:animate-mecanica-glow transition-[background-color] duration-700 ease-out">
-          <div class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700 h-full " style="background-image: url('/src/assets/images/cards_mecanica.png') ;">
+        <div
+          class="rotating-border--hover max-w-full rounded-2xl p-px bg-zinc-950 hover:bg-accent-primary [&.is-center]:animate-mecanica-glow hover:animate-mecanica-glow transition-[background-color] duration-700 ease-out">
+          <div
+            class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700 h-full "
+            style="background-image: url('/src/assets/images/cards_mecanica.png') ;">
             <div>
-              <div class="bg-red-600/10 text-red-600 mb-4 flex h-10 w-10 items-center justify-center rounded-lg text-lg">
+              <div
+                class="bg-red-600/10 text-red-600 mb-4 flex h-10 w-10 items-center justify-center rounded-lg text-lg">
                 🛠️
               </div>
               <h3 class="mb-3 text-lg font-bold tracking-tight uppercase text-zinc-100">
                 Mecânica Geral
               </h3>
               <p class="mb-4 text-xs leading-relaxed text-zinc-400">
-                Revisões mecânicas completas, ajuste de motores, substituição de kits de transmissão, embreagens, freios e suspensão para todas as marcas.
+                Revisões mecânicas completas, ajuste de motores, substituição de kits de transmissão, embreagens, freios
+                e suspensão para todas as marcas.
               </p>
             </div>
             <div class="rotating-border rotating-border--hover w-full rounded transition-all transform-3d mt-4">
@@ -182,17 +207,25 @@
           </div>
         </div>
 
-        <div class="rotating-border--hover max-w-full rounded-2xl p-px bg-zinc-950 hover:bg-accent-primary [&.is-center]:animate-mecanica-glow hover:animate-mecanica-glow transition-[background-color] duration-700 ease-out">
-          <div class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700 h-full" style="background-image: url('/src/assets/images/cards_eletrica.png');">
+        <div
+          class="rotating-border--hover max-w-full rounded-2xl p-px bg-zinc-950 hover:bg-accent-primary [&.is-center]:animate-mecanica-glow hover:animate-mecanica-glow transition-[background-color] duration-700 ease-out">
+          <div
+            class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700 h-full"
+            style="background-image: url('/src/assets/images/cards_eletrica.png');">
             <div>
-              <div class="bg-red-600/10 text-red-600 mb-4 flex h-10 w-10 items-center justify-center rounded-lg text-lg">
+              <div
+                class="bg-red-600/10 text-red-600 mb-4 flex h-10 w-10 items-center justify-center rounded-lg text-lg">
                 ⚡
               </div>
               <h3 class="mb-3 text-lg font-bold tracking-tight uppercase text-zinc-100">
                 Unidade Elétrica
               </h3>
               <p class="mb-4 text-xs leading-relaxed text-zinc-400">
-                Diagnósticos elétricos minuciosos em unidade dedicada. Reparo de <abbr title="Conjunto de fios que conecta os componentes elétricos da moto">chicotes</abbr>, testes de <abbr title="Peça responsável por gerar energia elétrica para a moto">estator</abbr>, <abbr title="Dispositivo que converte corrente alternada em corrente contínua">retificadores</abbr> e troca de baterias com garantia.
+                Diagnósticos elétricos minuciosos em unidade dedicada. Reparo de <abbr
+                  title="Conjunto de fios que conecta os componentes elétricos da moto">chicotes</abbr>, testes de <abbr
+                  title="Peça responsável por gerar energia elétrica para a moto">estator</abbr>, <abbr
+                  title="Dispositivo que converte corrente alternada em corrente contínua">retificadores</abbr> e troca
+                de baterias com garantia.
               </p>
             </div>
             <div class="rotating-border rotating-border--hover w-full rounded transition-all transform-3d mt-4">
@@ -204,17 +237,22 @@
           </div>
         </div>
 
-        <div class="rotating-border--hover max-w-full rounded-2xl p-px bg-zinc-950 hover:bg-accent-primary [&.is-center]:animate-mecanica-glow hover:animate-mecanica-glow transition-[background-color] duration-700 ease-out">
-          <div class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700 h-full" style="background-image: url('/src/assets/images/cards_pecas.png');">
+        <div
+          class="rotating-border--hover max-w-full rounded-2xl p-px bg-zinc-950 hover:bg-accent-primary [&.is-center]:animate-mecanica-glow hover:animate-mecanica-glow transition-[background-color] duration-700 ease-out">
+          <div
+            class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700 h-full"
+            style="background-image: url('/src/assets/images/cards_pecas.png');">
             <div>
-              <div class="bg-red-600/10 text-red-600 mb-4 flex h-10 w-10 items-center justify-center rounded-lg text-lg">
+              <div
+                class="bg-red-600/10 text-red-600 mb-4 flex h-10 w-10 items-center justify-center rounded-lg text-lg">
                 ⚙️
               </div>
               <h3 class="mb-3 text-lg font-bold tracking-tight uppercase text-zinc-100">
                 Balcão de Peças
               </h3>
               <p class="mb-4 text-xs leading-relaxed text-zinc-400">
-                Estoque massivo e pronta entrega de componentes internos, pastilhas, filtros, relações completas e óleos das principais marcas do mercado.
+                Estoque massivo e pronta entrega de componentes internos, pastilhas, filtros, relações completas e óleos
+                das principais marcas do mercado.
               </p>
             </div>
             <div class="rotating-border rotating-border--hover w-full rounded transition-all transform-3d mt-4">
@@ -226,17 +264,22 @@
           </div>
         </div>
 
-        <div class="rotating-border--hover max-w-full rounded-2xl p-px bg-zinc-950 hover:bg-accent-primary [&.is-center]:animate-mecanica-glow hover:animate-mecanica-glow transition-[background-color] duration-700 ease-out">
-          <div class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700 h-full" style="background-image: url('/src/assets/images/cards_pneus.png');">
+        <div
+          class="rotating-border--hover max-w-full rounded-2xl p-px bg-zinc-950 hover:bg-accent-primary [&.is-center]:animate-mecanica-glow hover:animate-mecanica-glow transition-[background-color] duration-700 ease-out">
+          <div
+            class="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900 bg-contain bg-top bg-no-repeat p-8 pt-56 transition-all hover:border-zinc-700 h-full"
+            style="background-image: url('/src/assets/images/cards_pneus.png');">
             <div>
-              <div class="bg-red-600/10 text-red-600 mb-4 flex h-10 w-10 items-center justify-center rounded-lg text-lg">
+              <div
+                class="bg-red-600/10 text-red-600 mb-4 flex h-10 w-10 items-center justify-center rounded-lg text-lg">
                 🏁
               </div>
               <h3 class="mb-3 text-lg font-bold tracking-tight uppercase text-zinc-100">
                 Pneus & Fluídos
               </h3>
               <p class="mb-4 text-xs leading-relaxed text-zinc-400">
-                Troca imediata de pneus de alta durabilidade e performance. Alinhamento de rodas e substituição rápida de fluídos de freio e lubrificantes.
+                Troca imediata de pneus de alta durabilidade e performance. Alinhamento de rodas e substituição rápida
+                de fluídos de freio e lubrificantes.
               </p>
             </div>
             <div class="rotating-border rotating-border--hover w-full rounded transition-all transform-3d mt-4">
@@ -264,29 +307,38 @@
         </a>
       </div>
 
-      <div id="insta-feed-gallery" class="grid grid-cols-2 gap-4 md:grid-cols-4 [&>*]:p-px [&>*]:bg-zinc-800 [&>*]:hover:bg-red-600 [&>*]:transition-all [&>*]:duration-700 [&>*>*>*]:rounded-xl">
-        <div class="block p-1 aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+      <div id="insta-feed-gallery"
+        class="grid grid-cols-2 gap-4 md:grid-cols-4 [&>*]:p-px [&>*]:bg-zinc-800 [&>*]:hover:bg-red-600 [&>*]:transition-all [&>*]:duration-700 [&>*>*>*]:rounded-xl">
+        <div
+          class="block p-1 aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
           <div class="ig">photo</div>
         </div>
-        <div class="block p-1 aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+        <div
+          class="block p-1 aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
           <div class="ig">photo</div>
         </div>
-        <div class="block p-1 aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+        <div
+          class="block p-1 aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
           <div class="ig">photo</div>
         </div>
-        <div class="block p-1 aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+        <div
+          class="block p-1 aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
           <div class="ig">photo</div>
         </div>
-        <div class="block p-1 aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+        <div
+          class="block p-1 aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
           <div class="ig">photo</div>
         </div>
-        <div class="block p-1 aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+        <div
+          class="block p-1 aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
           <div class="ig">photo</div>
         </div>
-        <div class="block p-1 [&>img]:rounded-xl aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+        <div
+          class="block p-1 [&>img]:rounded-xl aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
           <div class="ig">photo</div>
         </div>
-        <div class="block p-1 aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
+        <div
+          class="block p-1 aspect-square items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-medium tracking-wider text-zinc-600 uppercase">
           <div class="ig">photo</div>
         </div>
       </div>
@@ -296,13 +348,15 @@
   <footer class="border-t border-zinc-900 bg-zinc-950 py-12 text-center text-xs tracking-wide text-zinc-500">
     <p class="mb-2">© 2026 GENERAL MOTO PEÇAS. Todos os direitos reservados.</p>
     <p>Atendimento de Segunda a Sábado • Sorocaba / SP</p>
-    <p class="mt-2"><a href="https://pepa.dev.br/" target="_blank" rel="noopener noreferrer" class="hover:underline">Desenvolvido by Pépa</a></p>
+    <p class="mt-2"><a href="https://pepa.dev.br/" target="_blank" rel="noopener noreferrer"
+        class="hover:underline">Desenvolvido by Pépa</a></p>
   </footer>
 
   <a href="#" id="floating-whatsapp"
     class="whatsapp-btn pointer-events-none fixed right-6 bottom-6 z-50 translate-y-10 rounded-full bg-emerald-500 p-4 text-white opacity-0 shadow-2xl transition-all duration-300 hover:bg-emerald-600">
     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.296 1.489 4.93 1.49 5.361 0 9.749-4.305 9.752-9.605.001-2.568-1.002-4.979-2.825-6.793C16.68 2.431 14.269 1.43 11.72 1.43 6.361 1.43 1.974 5.735 1.971 11.036c-.001 1.742.476 3.442 1.391 4.912l-.982 3.593 3.667-.957z" />
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.296 1.489 4.93 1.49 5.361 0 9.749-4.305 9.752-9.605.001-2.568-1.002-4.979-2.825-6.793C16.68 2.431 14.269 1.43 11.72 1.43 6.361 1.43 1.974 5.735 1.971 11.036c-.001 1.742.476 3.442 1.391 4.912l-.982 3.593 3.667-.957z" />
     </svg>
   </a>
 
@@ -316,7 +370,8 @@
       <div class="mb-5 flex items-center justify-between">
         <div class="flex items-center gap-2.5">
           <svg class="h-5 w-5 shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.296 1.489 4.93 1.49 5.361 0 9.749-4.305 9.752-9.605.001-2.568-1.002-4.979-2.825-6.793C16.68 2.431 14.269 1.43 11.72 1.43 6.361 1.43 1.974 5.735 1.971 11.036c-.001 1.742.476 3.442 1.391 4.912l-.982 3.593 3.667-.957z" />
+            <path
+              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.296 1.489 4.93 1.49 5.361 0 9.749-4.305 9.752-9.605.001-2.568-1.002-4.979-2.825-6.793C16.68 2.431 14.269 1.43 11.72 1.43 6.361 1.43 1.974 5.735 1.971 11.036c-.001 1.742.476 3.442 1.391 4.912l-.982 3.593 3.667-.957z" />
           </svg>
           <h2 id="modal-title" class="text-sm font-bold tracking-widest text-zinc-300 uppercase">Enviar mensagem</h2>
         </div>
@@ -341,7 +396,8 @@
         <a id="modal-confirm" href="#" target="_blank" rel="noopener noreferrer"
           class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-3 text-sm font-bold tracking-wider text-white uppercase transition-colors hover:bg-emerald-500">
           <svg class="h-5 w-5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.296 1.489 4.93 1.49 5.361 0 9.749-4.305 9.752-9.605.001-2.568-1.002-4.979-2.825-6.793C16.68 2.431 14.269 1.43 11.72 1.43 6.361 1.43 1.974 5.735 1.971 11.036c-.001 1.742.476 3.442 1.391 4.912l-.982 3.593 3.667-.957z" />
+            <path
+              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.296 1.489 4.93 1.49 5.361 0 9.749-4.305 9.752-9.605.001-2.568-1.002-4.979-2.825-6.793C16.68 2.431 14.269 1.43 11.72 1.43 6.361 1.43 1.974 5.735 1.971 11.036c-.001 1.742.476 3.442 1.391 4.912l-.982 3.593 3.667-.957z" />
           </svg>
           Enviar no WhatsApp
         </a>

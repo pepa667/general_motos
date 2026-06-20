@@ -1,7 +1,7 @@
 // FIX: Ajustado para subir um nível a partir de /src/app/ e encontrar o globals.css em /src/
 import '../styles/globals.css';
 
-const WHATSAPP_PHONE = '5515981661573';
+const WHATSAPP_PHONE = '551578954583';
 
 // FIX: Adicionado 'servico-pecas' para bater com o data-cta do HTML
 const MESSAGES = {
