@@ -1,7 +1,7 @@
 // IMPORTANTE: Ajustado para o nome real do seu arquivo de estilos
 import '../styles/globals.css';
 
-const WHATSAPP_PHONE = '5515981661573';
+const WHATSAPP_PHONE = '5515272485728';
 
 const MESSAGES = {
   header: 'Olá! Conheci o site da UFC e gostaria de agendar um horário de atendimento.',
